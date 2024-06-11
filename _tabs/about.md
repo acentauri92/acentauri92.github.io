@@ -14,7 +14,7 @@ Experienced Embedded Software Developer with 7 years of experience in designing 
 - **RTOS:** FreeRTOS, Micrium uC/OS III
 
 <p style="text-align: justify;">
-<a href="/assets/lib/Dheeraj_Resume.pdf" target="_blank">Download My Resume</a>
+<a href="/assets/Dheeraj_Resume.pdf" target="_blank">Download My Resume</a>
 </p>
 
 ## Experience
