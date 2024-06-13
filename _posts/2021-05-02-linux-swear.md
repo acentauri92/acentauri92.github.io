@@ -4,6 +4,9 @@ title: Linux Kernel and swear words
 date: '2021-05-02 00:00:00'
 categories: [software]
 tags: [linux]     # TAG names should always be lowercase
+image:
+  path: /assets/images/linux-swear/linux_3_prev.png
+  alt: image alternative text
 comments: true
 ---
 
