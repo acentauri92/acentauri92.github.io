@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A laboratory in your hands!"
-date:   2025-03-30 11:20:10 +0530
+date:   2022-01-17 11:20:10 +0530
 categories: lab phone
 ---
 
