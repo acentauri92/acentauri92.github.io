@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "Newton's first law and the Barometer"
-date:   2026-01-14 00:00:00 +0530
-categories: 
-draft: true
+date:   2026-02-14 00:00:00 +0530
+categories: newton pressure phyphox
 ---
 Some physics lessons arrive in a classroom. Others arrive as a breeze on your shoulder. Cheeky, right? Ignore me.
 
