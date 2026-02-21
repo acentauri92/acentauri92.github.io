@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "Identifying Gigabit ethernet!"
+date:   2021-11-10 11:20:10 +0530
+categories: ethernet networking
+---
+
+Ever wonder if your router is gigabit-capable or not? There is a quick and easy 
+way to find out. If you flip over your router and check its LAN ports, you’ll 
+see that there are metallic contacts inside them.
+
+In the image below, you’ll see that out of the eight slots available, only four 
+of them have metal contacts. The image is that of a 100Mbps capable router and 
+the four pins used are the two sets of differential transmit and receive pins 
+(Tx+, Tx-, Rx+, Rx-).
+
+![Description of image](/assets/images/ethernet/ethernet_1.jpeg){:width="600px" height="400px" style="border-radius: 10px; display: block; margin: 0 auto;"}
+
+The following image shows the same LAN ports but that of a 1Gbps capable router 
+and you can see that all eight slots have metallic contacts. Image 3 shows the 
+pinout of a RJ45 connector and you can see how the eight pins are used in a 
+100Mbps and a 1Gbps connection.
+
+![Description of image](/assets/images/ethernet/ethernet_2.jpeg){:width="600px" height="400px" style="border-radius: 10px; display: block; margin: 0 auto;"}
+
+![Description of image](/assets/images/ethernet/ethernet_3.jpeg){:width="500px" height="300px" style="border-radius: 10px; display: block; margin: 0 auto;"}
+
+Another method to find out the same is by looking at the underside of the PCB. 
+Be aware that if you open the casing, the manufacturer will not honor the device 
+warranty. As you can see in image below, there are only four traces (shown by 
+the arrows) going from the LAN connector to the processor.
+
+![Description of image](/assets/images/ethernet/ethernet_4.jpeg){:width="600px" height="400px" style="border-radius: 10px; display: block; margin: 0 auto;"}
+
+This method of looking at the metal contacts might not always be accurate. 
+Sometimes, LAN connectors with eight metal contacts are used in a 100Mbps router. 
+However, if you can see that only four metal contacts are present, you can be 
+sure that it is a 100Mbps capable router.
