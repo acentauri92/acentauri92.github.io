@@ -1,0 +1,85 @@
+---
+layout: post
+title:  "A pointer to a pointer to a what?"
+date:   2022-10-09 1:20:10 +0530
+categories: C programming
+---
+
+Pointers can be quite challenging at times for anyone starting out in C 
+programming. But once you master it, there’s quite a lot you can do with them 
+and quite a lot go wrong. Even after years of programming in C, I stumble upon 
+bugs that take forever to find and fix. Most of these bugs are due to passing 
+an incorrect pointer or accessing some location that doesn’t exist anymore. Now 
+if pointers can be a problem, what about double and triple pointers which make 
+things even more difficult?
+
+Now, in the process of finding this bug, I start out my drawing a bunch of 
+diagrams showing the stack frames and little boxes representing dynamically 
+created memory (ones that are malloced). Eventually, the entire page is full of 
+boxes and rectangles and I lose track of what I am trying to do.
+
+I stuck to this way of drawing diagrams until I stumbled upon a great little 
+tool called Python Tutor. that made my life much easier and helped me visualize 
+computer memory and how it is handled. The name might be a bit misleading as it 
+not only helps visualize programs in python but a few other languages. A quick 
+view of their home page shows you its capabilities. You can see how they show 
+the different objects and functions are shown visually.
+
+![Description of image](/assets/images/pointer/pointer_1.png)
+
+![Description of image](/assets/images/pointer/pointer_2.png)
+
+As you can see in the image above, I created a pointer variable that points to a 
+character that points a globally initialized string. The main function does 
+nothing but print out the address of that string. Once you type out the code and 
+hit the “Visualize Execution” button under the editor, you see the code visualized. 
+Now, what can we infer from the visualization? The memory for the string is 
+created in the heap and the address is assigned to the pointer variable. We can 
+also see the ‘\0’ at the end of the string which is a string terminator in C. 
+This is how we know where the string ends. The little arrow indicates where the 
+pointer is pointing to. In this case, it is pointing to the beginning of the string. 
+The editor also has a neat feature where you can step through a code like a debugger. 
+You can hit the “Prev” and “Next” buttons to execute your code line by line and 
+see each statement visualized on the right. The output that you print out (the 
+string passed to printf) goes into the box on the right as well.
+
+Now that we know how to use the tool, let’s move on to a bit more complex program 
+where we have control over creating memory. The code here shows a function that 
+creates a function “allocateArray” that creates an array dynamically based on the 
+size and fills it the value provided via the arguments. Pretty simple, right? We 
+pass in the pointer to the array of integers we created in main and the function 
+does the rest. As you can see below, we create a pointer to an integer called 
+vector and pass it to the function which creates the memory and fills it with 
+the value and on the right we see the same happening. Everything seems to be fine 
+until we exit the function.
+
+![Description of image](/assets/images/pointer/pointer_3.png)
+
+The moment we return from the function, the array variable which has the pointer 
+to the newly created memory region disappears and that pointer gets lost as we 
+store that in a local variable. This is shown in the image below.
+
+![Description of image](/assets/images/pointer/pointer_4.png)
+
+How do we fix this? This is where double pointers come in. A double pointer is 
+basically a pointer to a pointer to something. The image below shows the same c
+ode as before but with a minor modification. We pass a a pointer to a pointer to 
+the vector variable.
+
+![Description of image](/assets/images/pointer/pointer_5.png)
+
+Everything here looks similar to what we saw before. But when we return from the 
+function, we keep the address of the newly created array. The same is shown in 
+the image below where we can see that we still have access to the array we 
+created dynamically.
+
+![Description of image](/assets/images/pointer/pointer_6.png)
+
+It can be quite difficult to understand pointers and their use cases but with 
+the right learning resources, it shouldn’t be that difficult. This tool over a 
+period of time has helped me understand and master pointers and hopefully, can 
+be of help to many others who faced similar issues. If you are just getting 
+started with pointers, then I would recommend the book <a href="https://www.oreilly.com/library/view/understanding-and-using/9781449344535/" target="_blank" rel="noopener noreferrer">Understanding and using C Pointers by Richard 
+Reese</a>. The example shown above was taken from that book. 
+This book had helped me a lot when I was getting started with my career in 
+programming.

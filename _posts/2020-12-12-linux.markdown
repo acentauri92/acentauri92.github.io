@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "The Linux Kernel and swear words"
+date:   2020-12-12 11:20:10 +0530
+categories: linux kernel
+---
+
+A while ago, while browsing through the Linux 5.13 source, I came across several 
+swear words. Out of curiosity, I wanted to see if any more of these words existed. 
+So, using the lovely little grep tool, I searched for some of the words and was 
+amazed by how many of these were present. You can see a screenshot below to get 
+an idea.
+
+![Description of image](/assets/images/linux/linux_1.jpeg)
+
+It turns out that there is a fun little webpage that does exactly this – Count 
+the number of words matching your input. You can see the count for the word 
+‘stupid’ increases with every release. Are developers getting increasingly 
+frustrated every year maybe? With the line count of the Linux source approaching 
+30 million, I’m not really surprised.
+
+![Description of image](/assets/images/linux/linux_2.jpeg)
+
+You can also checkout how different companies use their names in the source code. 
+Looks like Google is the one that includes its nam ethe most.
+
+![Description of image](/assets/images/linux/linux_3.jpeg)
+
+Go ahead and check out this webpage. You can type whatever word comes into your 
+mind.

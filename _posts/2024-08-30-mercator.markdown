@@ -1,0 +1,147 @@
+---
+layout: post
+title:  "The puzzling Mercator projection and how aircraft navigate"
+date:   2024-08-30 11:20:10 +0530
+categories: maps meractor
+---
+
+The Mercator projection, which is the map most of us grew up seeing in school 
+and on almost every world map, becomes quite confusing once you learn what 
+goes into making it. Throughout my childhood, I assumed that Greenland was 
+nearly as large as Africa and that Antarctica covered most of the southern 
+half of the planet. You can see why if you look at the familiar map that we 
+all grew up with.
+
+In reality, the truth is very different. I only discovered this much later in 
+life after watching a documentary about map projections. More recently, I came 
+across a book titled “Mapmatics” by Paulina Rowinska, which promised to explain 
+these projections and many other aspects of cartography. I ordered it immediately, 
+and I highly recommend reading it. It turned out to be a fascinating dive into 
+how maps are constructed, and I learned many things I had never considered before.
+
+The book opens by exploring how maps are made and how the famous Mercator 
+projection came to be. The short version is this: you cannot accurately represent 
+a sphere on a flat sheet of paper. To make it work, certain compromises must be 
+made. Those compromises lead to distortions, especially near the poles, and that 
+is what causes the confusion about the size of different continents.
+
+![Description of image](/assets/images/mercator/mapmatics.jpg)
+
+Gerardus Mercator, who originally designed this map, imagined that there was a 
+light source placed inside a transparent globe. The continents were drawn on the 
+surface of the globe, and the light would cast their shadows onto a flat sheet of 
+paper placed nearby. The resulting shadow outlines formed the map that we now 
+recognize as the Mercator projection. This method preserves angles for navigation, 
+but it is precisely what causes the continents near the poles to appear much larger 
+than they actually are.
+
+Another strange consequence of this projection shows up in a very common situation: 
+the digital maps we use every day. Most online map services rely on the Mercator 
+projection, and one experience in particular completely changed the way I thought 
+about maps. While flying from Chicago to Delhi, I looked out the window and saw 
+what I was sure were the Northern Lights. I was confused because I always assumed 
+airplanes flew in straight lines across the map, just like the neat lines we draw 
+between two cities in textbooks or on websites. It sounds naïve, but many people 
+have the same assumption until they learn what is really happening. For that, I 
+would like to thank the education system for convincing me that flat map straight 
+lines must also be straight paths in reality.
+
+![Description of image](/assets/images/mercator/path.png)
+
+Jokes apart, I had no idea why I was seeing the Northern Lights when I believed we 
+were flying close to the equator. The first clue came from the screen in front of my 
+seat that showed the aircraft’s route, and it looked nothing like what I had imagined. 
+There was no straight line at all.
+
+Instead, the map showed us flying somewhere over Greenland, with a curved path that 
+looked completely different from the straight trans-Atlantic line I had assumed. After 
+doing some research, I learned that aircraft routinely fly over Greenland on long-distance 
+flights between North America and Asia or the Middle East. But why would they do that? 
+The answer becomes very clear when you use a globe.
+
+If you place two pins at the departure and destination points on a globe and stretch 
+a piece of string tightly between them, the path that the string naturally follows 
+is almost the same path taken by airplanes. If you don’t have a globe, you can try 
+this using Google Earth, which lets you view the world in 3D. We will be doing the 
+same “string experiment” virtually using that tool.
+
+![Description of image](/assets/images/mercator/google-earth.png)
+
+I plotted the route between Atlanta in the United States and Doha in Qatar. You can 
+try this yourself using the polygon tool in the menu bar in Google Earth. Pick the 
+source and destination just as we did before, and Google Earth will trace the shortest 
+path. You will notice that the route bends northward, passing close to Greenland and 
+the northern part of the United Kingdom.
+
+To show that this is not just a theoretical path but the same one aircraft actually use, 
+we turn to the Flightradar24 website. When you open the site and zoom out, you will see 
+dozens of aircraft moving across the Atlantic. Even without the route lines enabled, 
+you can vaguely make out a pattern in how they travel. The image on the left shows 
+aircraft positions without paths, and the image on the right shows the same scene 
+with flight paths enabled. Notice how closely they match the Google Earth route we 
+plotted earlier.
+
+<div>
+  <img src="/assets/images/mercator/traffic.png" width="49%" alt="Image 1">
+  <img src="/assets/images/mercator/traffic-with-path.png" width="49%" alt="Image 2">
+</div>
+
+It is not always the case that aircraft follow the shortest path exactly. Sometimes, 
+due to restricted airspace, geopolitical issues, or weather systems, the aircraft must 
+take a detour and fly a slightly different route. For example, consider a flight from 
+Boston to Dubai. The image on the left shows the actual path taken by the aircraft, 
+while the image on the right shows the shortest route between the two cities as plotted 
+using Google Earth.
+
+The red lines in the left image mark different airspace boundaries. Each segment of 
+controlled airspace is managed by a particular country or authority. In this case, 
+the aircraft is clearly avoiding Syrian airspace and flying around it before continuing 
+toward the Persian Gulf.
+
+<div>
+  <img src="/assets/images/mercator/syria.png" width="49%" alt="Image 1">
+  <img src="/assets/images/mercator/syria-alternate.png" width="49%" alt="Image 2">
+</div>
+
+
+There is a website that you can use to check which airspaces are safe for civilian 
+aircraft. The image below shows the Syrian airspace marked as unsafe for civilian 
+overflights. This explains why flights in that region appear to deviate from the 
+shortest path and take a longer route around the area.
+
+![Description of image](/assets/images/mercator/syria-dnf.png)
+
+Sometimes, weather also causes a deviation in path as you can see in the image 
+below. The flight from Mumbai to Varnasi takes a detour around a patch of intense 
+precipitation.
+
+![Description of image](/assets/images/mercator/varnasi.png)
+
+In modern aviation, airliners do not fly freely across the sky; instead, they move along 
+a structured system of routes defined by waypoints. These waypoints form an invisible 
+network similar to the road system on the ground. Aircraft navigation computers store 
+thousands of these coordinates, allowing flights to follow predefined paths with high 
+precision.
+
+On long-haul flights, these waypoint networks trace out the great-circle route as closely 
+as practical. If you compare the plotted waypoints with the theoretical shortest path 
+from Google Earth, you will notice that both bend toward the poles rather than crossing 
+the Atlantic in a straight west-to-east line. This confirms that the shortest path in 
+three-dimensional space matches what airplanes actually do in real operations.
+
+In the image below, I have plotted out a set of waypoints which are nothing but 
+a specific set of coordinates that the aircraft use to navigate. They are kind 
+of like landmarks, but imaginary. The red line is the path that we plotted before 
+using google maps that sjows the shortest path between two places. You can see 
+how those waypoints closely follow the line.
+
+![Description of image](/assets/images/mercator/waypoints.png)
+
+What all of this demonstrates is that our intuition about geography is shaped more by 
+the maps we grow up with than by the geometry of the planet itself. The Mercator projection 
+is extremely useful for certain tasks, such as navigation at sea, but it also hides 
+fundamental truths about the size of continents and the way aircraft actually move 
+around the globe. On a spherical Earth, the shortest path bends, continents change scale,
+ and even straight lines refuse to behave the way they do on paper. Only when we look 
+ at a globe, or at tools such as Google Earth and Flightradar24, do we get a more 
+ accurate sense of how the world really works.
