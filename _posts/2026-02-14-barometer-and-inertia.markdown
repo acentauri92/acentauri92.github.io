@@ -42,7 +42,7 @@ When the car brakes, the denser air rushes forward due to inertia. The helium ba
 
 ### Experiment Setup on the MRT
 
-To test my MRT train hypothesis, I turned to [Phyphox](https://phyphox.org/) (Physical Phone Experiments), a smartphone application that provides access to raw sensor data. Modern phones contain:
+To test my MRT train hypothesis, I turned to [Phyphox](https://www.phyphox.org/) or Physical Phone Experiments, a smartphone application that provides access to raw sensor data. Modern phones contain:
 
 - Accelerometer
 
@@ -64,7 +64,7 @@ The second figure below shows a longer time window spanning several minutes of t
 
 The periodic nature of the signal confirms that the variations are not random environmental fluctuations. Instead, they are correlated with the train’s motion profile. From this broader trace, one can count the number of station stops, identify dwell time at stations (flat segments) and distinguish between acceleration and braking phases. The pressure signal effectively becomes a proxy for the train’s motion.
 
-![The ftroughs and crests in the pressure data](/assets/images/inertia/mrt_barometer_troughs.JPEG)
+![The troughs and crests in the pressure data](/assets/images/inertia/mrt_barometer_troughs.JPEG)
 
 Sadly, I forgot to record the accelerometer data to show that this phenomenon indeed happened only when the train accelerated and decelerated. But even without accelerometer data for that first run, the correlation with station stops was clear.
 
