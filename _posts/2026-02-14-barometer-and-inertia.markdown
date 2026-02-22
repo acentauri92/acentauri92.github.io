@@ -9,6 +9,7 @@ Some physics lessons arrive in a classroom. Others arrive as a breeze on your sh
 Recently, during a trip to Singapore, I had the opportunity to ride the Mass Rapid Transit (MRT). It is an impressively efficient and fully automated transport system. With no drivers in the cabin, passengers in the first coach can look straight through a front window and watch the tracks unfold ahead. I quickly developed a habit of standing there during every ride. You can see an image of the MRT below showing the first cabin.
 
 ![The first cabin in the Singapore MRT](/assets/images/inertia/MRT.png)
+*The first cabin in the Singapore MRT with a view to the front*
 
 During one such ride, while enjoying the view, I felt a noticeable breeze on the back of my shoulder. At first, I dismissed it as airflow from the air-conditioning system. However, I began to notice a pattern: the breeze appeared only when the train was approaching a station. After several stops, the pattern was unmistakable.
 
@@ -42,29 +43,26 @@ When the car brakes, the denser air rushes forward due to inertia. The helium ba
 
 ### Experiment Setup on the MRT
 
-To test my MRT train hypothesis, I turned to [Phyphox](https://www.phyphox.org) or Physical Phone Experiments, a smartphone application that provides access to raw sensor data. Modern phones contain:
+To test my MRT train hypothesis, I turned to [Phyphox](https://www.phyphox.org/) or Physical Phone Experiments, a smartphone application that provides access to raw sensor data. Modern phones contain:
 
 - Accelerometer
-
 - Gyroscope
-
 - Magnetometer
-
 - Barometer
-
 - Microphone
-
 - Light sensor
 
 The barometer, which is what we will be using, measures ambient air pressure with surprising sensitivity. I opened the barometer tool in the app and monitored pressure readings while standing in the first cabin. Over several stops, I observed a gradual pressure increase as the train decelerated approaching a station and a decrease in pressure as the train accelerated away. The plot shows the barometric pressure recorded over approximately 45 seconds, corresponding to a single approach–stop–departure cycle. At the beginning of the trace, the pressure is relatively stable at around 1008 hPa. As the train begins accelerating, the pressure gradually decreases, reaching a minimum of approximately 1006 hPa around 22–24 seconds. Once the train approaches a stop and begins decelerating, the pressure starts to increase.
 
 ![The barometer data](/assets/images/inertia/mrt_barometer.JPEG)
+*The barometer data showing a fall in pressure due to acceleration and then rise due to deceleration*
 
 The second figure below shows a longer time window spanning several minutes of travel. Each dip and rise corresponds to successive station stops. The repeating pattern is clearly visible. A pressure variation during deceleration, a partial recovery or overshoot during acceleration and a relatively flat segment during constant velocity travel between stations.
 
 The periodic nature of the signal confirms that the variations are not random environmental fluctuations. Instead, they are correlated with the train’s motion profile. From this broader trace, one can count the number of station stops, identify dwell time at stations (flat segments) and distinguish between acceleration and braking phases. The pressure signal effectively becomes a proxy for the train’s motion.
 
 ![The troughs and crests in the pressure data](/assets/images/inertia/mrt_barometer_troughs.JPEG)
+*The troughs and crests in the pressure data showing the stops that the train made*
 
 Sadly, I forgot to record the accelerometer data to show that this phenomenon indeed happened only when the train accelerated and decelerated. But even without accelerometer data for that first run, the correlation with station stops was clear.
 
@@ -95,12 +93,14 @@ The first figure shows the barometric pressure recorded from inside the aircraft
 This temporary rise in pressure is consistent with inertial effects inside the cabin. As the aircraft accelerates forward, the cabin structure responds immediately to engine thrust, but the air inside possesses inertia. Relative to the accelerating frame of the aircraft, the air lags slightly, establishing a longitudinal pressure gradient within the cabin. Depending on the location of the sensor along the cabin length, this redistribution can appear as a measurable pressure increase or decrease. The key observation is that the pressure variation coincides with the phase of strongest acceleration.
 
 ![Aircraft pressure data](/assets/images/inertia/aircraft_pressure.JPEG)
+*Aircraft pressure data showing an initial rise due to acceleration and then a drop due to altitude*
 
 After liftoff, the pressure trace changes character entirely. Instead of short-term fluctuations, the curve begins a steady downward trend. This marks the start of the climb phase. As the aircraft gains altitude, the outside atmospheric pressure decreases according to the well-known barometric relationship between pressure and height. Although the cabin is pressurized, it is not held at sea-level pressure; instead, it follows a controlled schedule that allows cabin pressure to decrease gradually as altitude increases. The smooth, continuous decline in the graph reflects this controlled cabin pressurization profile during climb.
 
 The second figure shows the corresponding accelerometer data along two axes during the same time interval. The acceleration trace reveals a clear increase during the takeoff roll. In the forward axis, the signal rises as thrust builds and the aircraft accelerates down the runway. The vertical axis shows fluctuations associated with vibration, runway irregularities, and eventually the transition to flight. Once airborne and in steady climb, the accelerations settle into a more stable profile dominated primarily by gravitational acceleration and small perturbations from turbulence.
 
 ![Aircraft acceleration data](/assets/images/inertia/aircraft_accelero.JPEG)
+*Aircraft acceleration data showing the forces during takeoff roll*
 
 When the pressure and acceleration data are considered together, a clear correlation emerges. The local rise in pressure occurs during the same time window as the strongest forward acceleration. This supports the interpretation that the initial pressure variation is driven by inertial redistribution of air within the cabin. After acceleration stabilizes and climb begins, the dominant effect on the barometer is no longer inertia but altitude gain, leading to the gradual pressure decrease seen in the remainder of the trace.
 
