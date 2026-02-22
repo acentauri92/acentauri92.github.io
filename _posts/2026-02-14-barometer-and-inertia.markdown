@@ -6,7 +6,7 @@ categories: newton pressure phyphox
 ---
 Some physics lessons arrive in a classroom. Others arrive as a breeze on your shoulder.
 
-Recently, during a trip to Singapore, I had the opportunity to ride the Mass Rapid Transit (MRT). It is an impressively efficient and fully automated transport system. With no drivers in the cabin, passengers in the first coach can look straight through a front window and watch the tracks unfold ahead. I quickly developed a habit of standing there during every ride. You can see an image of the MRT below showing the first cabin.
+Recently, during a trip to Singapore, I had the opportunity to ride the Mass Rapid Transit (MRT). It is an impressively efficient and fully automated transport system. With no drivers in the cabin, passengers in the first coach can look straight through a front window and watch the tracks unfold ahead. I quickly developed a habit of standing there during every ride.
 
 ![The first cabin in the Singapore MRT](/assets/images/inertia/MRT.png)
 *The first cabin in the Singapore MRT with a view to the front*
@@ -15,7 +15,7 @@ During one such ride, while enjoying the view, I felt a noticeable breeze on the
 
 That's when the physics alarm bell rang in my head. This acceleration-deceleration pattern reminded me of Newton's first law or the Law of Inertia.
 
-### Revisiting Newton’s First Law
+### Revisiting Newton’s first law
 
 Isaac Newton’s First Law of Motion, often called the Law of Inertia, states:
 
@@ -27,13 +27,9 @@ Air inside the vehicle behaves no differently.
 
 When the train decelerates, the cabin slows immediately due to braking forces transmitted through the structure. The air inside, possessing mass, tends to continue moving forward. Relative to the cabin, this creates a transient forward shift of air mass.
 
-That shift explains the draft I felt.
+That shift explains the draft I felt. If the air shifts forward during deceleration, it must accumulate somewhere. In a closed or semi-enclosed space like a train cabin, this forward movement temporarily increases air density and therefore pressure — near the front. This pressure increase should be measurable. And that is where a barometer becomes useful.
 
-### From Airflow to Pressure Redistribution
-
-If the air shifts forward during deceleration, it must accumulate somewhere. In a closed or semi-enclosed space like a train cabin, this forward movement temporarily increases air density and therefore pressure — near the front. This pressure increase should be measurable. And that is where a barometer becomes useful.
-
-### A Quick Note on Helium Balloons
+### A quick note on Helium balloons
 
 This phenomenon reminds me of a [well-known demonstration](https://www.youtube.com/watch?v=y8mzDvpKzfY) by Destin Sandlin on his Smarter Every Day channel. In his experiment, helium balloons inside a braking car move backward while braking — opposite to what many people intuitively expect.
 
@@ -41,7 +37,7 @@ This phenomenon reminds me of a [well-known demonstration](https://www.youtube.c
 
 When the car brakes, the denser air rushes forward due to inertia. The helium balloon, being less dense than air, experiences a buoyant force toward the region of lower pressure — which ends up being toward the rear of the car. The balloon therefore appears to move backward relative to the car. This is a powerful reminder that air has mass, inertia, and measurable dynamic behavior.
 
-### Experiment Setup on the MRT
+### Experiment setup on the MRT
 
 To test my MRT train hypothesis, I turned to [Phyphox](https://www.phyphox.org/) or Physical Phone Experiments, a smartphone application that provides access to raw sensor data. Modern phones contain:
 
@@ -57,7 +53,7 @@ The barometer, which is what we will be using, measures ambient air pressure wit
 ![The barometer data](/assets/images/inertia/mrt_barometer.JPEG)
 *The barometer data showing a fall in pressure due to acceleration and then rise due to deceleration*
 
-The second figure below shows a longer time window spanning several minutes of travel. Each dip and rise corresponds to successive station stops. The repeating pattern is clearly visible. A pressure variation during deceleration, a partial recovery or overshoot during acceleration and a relatively flat segment during constant velocity travel between stations.
+The second figure below shows a longer time window spanning several minutes of travel. Each dip and rise corresponds to successive station stops. The repeating pattern is clearly visible. A pressure decrease during accceleration, a partial recovery or overshoot during deceleration and a relatively flat segment during constant velocity travel between stations.
 
 The periodic nature of the signal confirms that the variations are not random environmental fluctuations. Instead, they are correlated with the train’s motion profile. From this broader trace, one can count the number of station stops, identify dwell time at stations (flat segments) and distinguish between acceleration and braking phases. The pressure signal effectively becomes a proxy for the train’s motion.
 
@@ -70,7 +66,7 @@ This confirmed the hypothesis: the breeze I felt was due to air inertia, and the
 
 ### Connecting this to previous experiments
 
-This experiment builds directly on [earlier investigations](https://dheeraj-reddy.in/lab/phone/2022/01/17/laboratory.html) documented in one of my previous articles. I highly recommend you check it out.
+This experiment builds directly on [earlier investigations](https://dheeraj-reddy.in/posts/laboratory/) documented in one of my previous articles. I highly recommend you check it out.
 
 In that article, I explored the relationship between altitude and atmospheric pressure using barometric measurements during flight. That analysis examined how pressure varies systematically with height and how smartphone sensors can capture that relationship with surprising accuracy.
 
@@ -95,7 +91,7 @@ This temporary rise in pressure is consistent with inertial effects inside the c
 ![Aircraft pressure data](/assets/images/inertia/aircraft_pressure.JPEG)
 *Aircraft pressure data showing an initial rise due to acceleration and then a drop due to altitude*
 
-After liftoff, the pressure trace changes character entirely. Instead of short-term fluctuations, the curve begins a steady downward trend. This marks the start of the climb phase. As the aircraft gains altitude, the outside atmospheric pressure decreases according to the well-known barometric relationship between pressure and height. Although the cabin is pressurized, it is not held at sea-level pressure; instead, it follows a controlled schedule that allows cabin pressure to decrease gradually as altitude increases. The smooth, continuous decline in the graph reflects this controlled cabin pressurization profile during climb.
+After liftoff, the pressure trace changes character entirely. Instead of short-term fluctuations, the curve begins a steady downward trend. This marks the start of the climb phase. As the aircraft gains altitude, the outside atmospheric pressure decreases according to the well-known barometric relationship between pressure and height. Although the cabin is pressurized, it is not held at sea-level pressure; instead, it follows a controlled schedule that allows cabin pressure to decrease gradually as altitude increases. The smooth, continuous decline in the graph reflects this controlled cabin pressurization profile during climb. Again, this altitude-pressure phenomenon is documented in detail in one of my [previous blog posts](https://dheeraj-reddy.in/posts/laboratory/).
 
 The second figure shows the corresponding accelerometer data along two axes during the same time interval. The acceleration trace reveals a clear increase during the takeoff roll. In the forward axis, the signal rises as thrust builds and the aircraft accelerates down the runway. The vertical axis shows fluctuations associated with vibration, runway irregularities, and eventually the transition to flight. Once airborne and in steady climb, the accelerations settle into a more stable profile dominated primarily by gravitational acceleration and small perturbations from turbulence.
 
@@ -108,12 +104,10 @@ In a single experiment, these measurements capture two distinct physical phenome
 
 ### Seeing the Familiar Differently
 
-What I value most in moments like these is not the data itself, but the realization that follows. Newton’s First Law is often introduced through idealized diagrams — blocks sliding on frictionless surfaces, arrows neatly indicating forces, motion represented by perfectly straight lines. These abstractions are useful, but they can create the impression that physics belongs primarily to controlled problems and simplified systems.
+What I value most in moments like these is not the data itself, but the realization that follows. Newton’s First Law is often introduced through idealized diagrams — blocks sliding on frictionless surfaces, arrows neatly indicating forces, motion represented by perfectly straight lines. These abstractions are useful, but dont explain the theory clearly.
 
 In reality, physics operates continuously in the background of everyday life. It is present in the faint breeze felt while a train slows into a station. It is visible in the counterintuitive motion of a helium balloon inside a braking car. It appears in the subtle pressure variations recorded inside a pressurized aircraft cabin during takeoff. These are not separate curiosities; they are different manifestations of the same fundamental principle — inertia acting on matter, whether solid or gaseous.
 
-The experiments described here demonstrate that Newton’s First Law is not merely a statement about rigid bodies in textbooks. It governs fluids, confined air masses, and enclosed environments. More importantly, its effects are measurable with tools that many of us already carry. A smartphone barometer, when paired with careful observation, becomes sufficient to detect pressure gradients caused by acceleration and to distinguish them from altitude-driven atmospheric changes.
-
-In summary, a simple sensory observation led to a testable hypothesis. That hypothesis was examined using accessible instrumentation. The resulting data confirmed that even small-scale inertial effects inside vehicles can be quantified. The broader conclusion is straightforward: fundamental physical laws are not distant or abstract. They are embedded in ordinary experiences, waiting to be recognized.
+In summary, a simple sensory observation led to a testable hypothesis. That hypothesis was examined using accessible instrumentation like the smartphone barometer. The resulting data confirmed that even small-scale inertial effects inside vehicles can be quantified. The broader conclusion is straightforward: fundamental physical laws are not distant or abstract. They are embedded in ordinary experiences, waiting to be recognized.
 
 Sometimes, noticing them requires nothing more than curiosity — and a barometer in your pocket.
