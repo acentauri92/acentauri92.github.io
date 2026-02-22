@@ -42,7 +42,7 @@ When the car brakes, the denser air rushes forward due to inertia. The helium ba
 
 ### Experiment Setup on the MRT
 
-To test my MRT train hypothesis, I turned to [Phyphox](https://www.phyphox.org/) or Physical Phone Experiments, a smartphone application that provides access to raw sensor data. Modern phones contain:
+To test my MRT train hypothesis, I turned to [Phyphox](https://www.phyphox.org) or Physical Phone Experiments, a smartphone application that provides access to raw sensor data. Modern phones contain:
 
 - Accelerometer
 
@@ -58,7 +58,7 @@ To test my MRT train hypothesis, I turned to [Phyphox](https://www.phyphox.org/)
 
 The barometer, which is what we will be using, measures ambient air pressure with surprising sensitivity. I opened the barometer tool in the app and monitored pressure readings while standing in the first cabin. Over several stops, I observed a gradual pressure increase as the train decelerated approaching a station and a decrease in pressure as the train accelerated away. The plot shows the barometric pressure recorded over approximately 45 seconds, corresponding to a single approach–stop–departure cycle. At the beginning of the trace, the pressure is relatively stable at around 1008 hPa. As the train begins accelerating, the pressure gradually decreases, reaching a minimum of approximately 1006 hPa around 22–24 seconds. Once the train approaches a stop and begins decelerating, the pressure starts to increase.
 
-![The baraometer data](/assets/images/inertia/mrt_barometer.JPEG)
+![The barometer data](/assets/images/inertia/mrt_barometer.JPEG)
 
 The second figure below shows a longer time window spanning several minutes of travel. Each dip and rise corresponds to successive station stops. The repeating pattern is clearly visible. A pressure variation during deceleration, a partial recovery or overshoot during acceleration and a relatively flat segment during constant velocity travel between stations.
 
