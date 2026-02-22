@@ -4,7 +4,7 @@ title:  "Newton's first law and the Barometer"
 date:   2026-02-14 00:00:00 +0530
 categories: newton pressure phyphox
 ---
-Some physics lessons arrive in a classroom. Others arrive as a breeze on your shoulder. Cheeky, right? Ignore me.
+Some physics lessons arrive in a classroom. Others arrive as a breeze on your shoulder.
 
 Recently, during a trip to Singapore, I had the opportunity to ride the Mass Rapid Transit (MRT). It is an impressively efficient and fully automated transport system. With no drivers in the cabin, passengers in the first coach can look straight through a front window and watch the tracks unfold ahead. I quickly developed a habit of standing there during every ride. You can see an image of the MRT below showing the first cabin.
 
@@ -12,7 +12,7 @@ Recently, during a trip to Singapore, I had the opportunity to ride the Mass Rap
 
 During one such ride, while enjoying the view, I felt a noticeable breeze on the back of my shoulder. At first, I dismissed it as airflow from the air-conditioning system. However, I began to notice a pattern: the breeze appeared only when the train was approaching a station. After several stops, the pattern was unmistakable.
 
-That observation is when the physics alarm bell rang in my head. This accelerating decelerating pattern reminded me of Newton's first law or the Law of Inertia.
+That's when the physics alarm bell rang in my head. This acceleration-deceleration pattern reminded me of Newton's first law or the Law of Inertia.
 
 ### Revisiting Newton’s First Law
 
@@ -34,15 +34,15 @@ If the air shifts forward during deceleration, it must accumulate somewhere. In 
 
 ### A Quick Note on Helium Balloons
 
-This phenomenon reminds me of a [well-known demonstration](https://www.youtube.com/watch?v=y8mzDvpKzfY) by Destin Sandlin on his Smarter Every Day channel. In his experiment, helium balloons inside a braking car move forward while braking — opposite to what many people intuitively expect.
+This phenomenon reminds me of a [well-known demonstration](https://www.youtube.com/watch?v=y8mzDvpKzfY) by Destin Sandlin on his Smarter Every Day channel. In his experiment, helium balloons inside a braking car move backward while braking — opposite to what many people intuitively expect.
 
 <iframe width="700" height="350" src="https://www.youtube.com/embed/y8mzDvpKzfY" title="A Baffling Balloon Behavior - Smarter Every Day 113" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-When the car brakes, the denser air rushes forward due to inertia. The helium balloon, being less dense than air, experiences a buoyant force toward the region of lower pressure — which ends up being toward the rear of the car. The balloon therefore appears to move forward relative to the car. This is a powerful reminder that air has mass, inertia, and measurable dynamic behavior.
+When the car brakes, the denser air rushes forward due to inertia. The helium balloon, being less dense than air, experiences a buoyant force toward the region of lower pressure — which ends up being toward the rear of the car. The balloon therefore appears to move backward relative to the car. This is a powerful reminder that air has mass, inertia, and measurable dynamic behavior.
 
 ### Experiment Setup on the MRT
 
-To test my MRT train hypothesis, I turned to Phyphox (Physical Phone Experiments), a smartphone application that provides access to raw sensor data. Modern phones contain:
+To test my MRT train hypothesis, I turned to [Phyphox](https://phyphox.org/) (Physical Phone Experiments), a smartphone application that provides access to raw sensor data. Modern phones contain:
 
 - Accelerometer
 
@@ -56,7 +56,7 @@ To test my MRT train hypothesis, I turned to Phyphox (Physical Phone Experiments
 
 - Light sensor
 
-The barometer, which is what we will be using, measures ambient air pressure with surprising sensitivity. I opened the barometer tool in the app and monitored pressure readings while standing in the first cabin. Over several stops, I observed a gradual pressure increase as the train decelerated approaching a station and a decrease in pressure as the train accelerated away. The plot shows the barometric pressure recorded over approximately 45 seconds, corresponding to a single approach–stop–departure cycle. At the beginning of the trace, the pressure is relatively stable at around 1008 hPa. As the train begins decelerating while approaching the station, the pressure gradually decreases, reaching a minimum of approximately 1006 hPa around 22–24 seconds. Once the train comes to a stop and then begins accelerating away from the station, the pressure rises again, eventually returning to its initial value.
+The barometer, which is what we will be using, measures ambient air pressure with surprising sensitivity. I opened the barometer tool in the app and monitored pressure readings while standing in the first cabin. Over several stops, I observed a gradual pressure increase as the train decelerated approaching a station and a decrease in pressure as the train accelerated away. The plot shows the barometric pressure recorded over approximately 45 seconds, corresponding to a single approach–stop–departure cycle. At the beginning of the trace, the pressure is relatively stable at around 1008 hPa. As the train begins accelerating, the pressure gradually decreases, reaching a minimum of approximately 1006 hPa around 22–24 seconds. Once the train approaches a stop and begins decelerating, the pressure starts to increase.
 
 ![The baraometer data](/assets/images/inertia/mrt_barometer.JPEG)
 
@@ -66,13 +66,13 @@ The periodic nature of the signal confirms that the variations are not random en
 
 ![The ftroughs and crests in the pressure data](/assets/images/inertia/mrt_barometer_troughs.JPEG)
 
-Sadly, I forgot to record the accelerometer data to show that this phenomenon indeed happened only when the train accelereated and decelerated. But even without accelerometer data for that first run, the correlation with station stops was clear.
+Sadly, I forgot to record the accelerometer data to show that this phenomenon indeed happened only when the train accelerated and decelerated. But even without accelerometer data for that first run, the correlation with station stops was clear.
 
 This confirmed the hypothesis: the breeze I felt was due to air inertia, and the pressure changes were measurable evidence of Newton’s First Law in action.
 
-### Connecting This to Previous Experiments
+### Connecting this to previous experiments
 
-This experiment builds directly on [earlier investigations](https://dheeraj-reddy.in/lab/phone/2022/01/17/laboratory.html) documented in one of my previous articles. I highly reccomend you check it out.
+This experiment builds directly on [earlier investigations](https://dheeraj-reddy.in/lab/phone/2022/01/17/laboratory.html) documented in one of my previous articles. I highly recommend you check it out.
 
 In that article, I explored the relationship between altitude and atmospheric pressure using barometric measurements during flight. That analysis examined how pressure varies systematically with height and how smartphone sensors can capture that relationship with surprising accuracy.
 
@@ -80,7 +80,7 @@ In another experiment, I explored unconventional uses of smartphone sensors — 
 
 ### Repeating the Experiment — This Time in an Aircraft
 
-Later in the trip, I had another opportunity to repeat the experiment — this time aboard an Airbus A350  and this time, I prepared more carefully.
+Later in the trip, I had another opportunity to repeat the experiment — this time aboard an Airbus A350, I prepared more carefully.
 
 > Barometer recording: ON
 

@@ -28,8 +28,8 @@ url: "https://dheeraj-reddy.in"
 github:
   username: acentauri92 # change to your GitHub username
 
-twitter:
-  username: acentauri92 # change to your Twitter username
+linkedin:
+  username: jonnalad
 
 social:
   # Change to your full name.
@@ -37,11 +37,9 @@ social:
   name: Dheeraj Jonnalagadda
   links:
     # The first element serves as the copyright owner's link
-    - https://linkedin.com/in/jonnalad
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
+    # - https://www.hackster.io/acentauri92
     
 
 # Site Verification Settings
