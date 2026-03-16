@@ -5,46 +5,13 @@ date:   2024-08-30 11:20:10 +0530
 categories: maps meractor
 ---
 
-The Mercator projection, which is the map most of us grew up seeing in school 
-and on almost every world map, becomes quite confusing once you learn what 
-goes into making it. Throughout my childhood, I assumed that Greenland was 
-nearly as large as Africa and that Antarctica covered most of the southern 
-half of the planet. You can see why if you look at the familiar map that we 
-all grew up with.
+The Mercator projection is the map most of us grew up seeing in school and on almost every digital screen today, but it is a masterclass in deception. While we rely on it for its familiar rectangular shape, the map becomes deeply puzzling once you peel back the layers of its construction. Throughout my childhood, I instinctively believed that Greenland was a frozen giant nearly as large as Africa, and that Antarctica was a massive white continent spanning the entire southern hemisphere. In reality, Africa is roughly fourteen times larger than Greenland, and the "massive" icy south is far more compact than the map suggests. This distortion isn't just a quirk of design, it is a byproduct of trying to solve the impossible task of flattening a sphere onto a 2D sheet. By stretching the world to preserve angles for sailors, the Mercator projection inadvertently warped our collective sense of global geography.
 
-In reality, the truth is very different. I only discovered this much later in 
-life after watching a documentary about map projections. More recently, I came 
-across a book titled “Mapmatics” by Paulina Rowinska, which promised to explain 
-these projections and many other aspects of cartography. I ordered it immediately, 
-and I highly recommend reading it. It turned out to be a fascinating dive into 
-how maps are constructed, and I learned many things I had never considered before.
+ I only discovered the truth much later after watching a documentary on map projections, which eventually led me to a fascinating book titled “Mapmatics” by Paulina Rowinska. It promised to explain these mathematical illusions and the hidden logic of cartography. I ordered it immediately and cannot recommend it highly enough. It turns out that the "flaws" of the Mercator projection were actually a deliberate trade-off for 16th-century navigation. Gerardus Mercator envisioned a transparent globe with a light source at its center, projecting the shadows of the continents onto a cylinder wrapped around the Earth. When this cylinder is unrolled, it creates a map where every straight line represents a constant compass bearing. This made it an essential tool for sailors, but it came at a massive cost to scale. To keep those angles accurate, the map must "stretch" as you move toward the poles. This is why landmasses like Greenland—which is actually smaller than Algeria—appear to rival the size of entire continents on your classroom wall.
 
-The book opens by exploring how maps are made and how the famous Mercator 
-projection came to be. The short version is this: you cannot accurately represent 
-a sphere on a flat sheet of paper. To make it work, certain compromises must be 
-made. Those compromises lead to distortions, especially near the poles, and that 
-is what causes the confusion about the size of different continents.
+<img src="/assets/images/mercator/mapmatics.jpg" alt="Flight path on Mercator" width="50%">
 
-![Description of image](/assets/images/mercator/mapmatics.jpg)
-
-Gerardus Mercator, who originally designed this map, imagined that there was a 
-light source placed inside a transparent globe. The continents were drawn on the 
-surface of the globe, and the light would cast their shadows onto a flat sheet of 
-paper placed nearby. The resulting shadow outlines formed the map that we now 
-recognize as the Mercator projection. This method preserves angles for navigation, 
-but it is precisely what causes the continents near the poles to appear much larger 
-than they actually are.
-
-Another strange consequence of this projection shows up in a very common situation: 
-the digital maps we use every day. Most online map services rely on the Mercator 
-projection, and one experience in particular completely changed the way I thought 
-about maps. While flying from Chicago to Delhi, I looked out the window and saw 
-what I was sure were the Northern Lights. I was confused because I always assumed 
-airplanes flew in straight lines across the map, just like the neat lines we draw 
-between two cities in textbooks or on websites. It sounds naïve, but many people 
-have the same assumption until they learn what is really happening. For that, I 
-would like to thank the education system for convincing me that flat map straight 
-lines must also be straight paths in reality.
+One of the consequences of this projection shows up in a situation we encounter every day: digital maps. While flying from Chicago to Delhi, I looked out the window and saw what I was certain were the Northern Lights over the horizon. I was completely baffled; according to the flat maps I had studied my whole life, I thought a flight to India should take a path that is a straight line east across the Atlantic, as shown in the image below. It sounds naïve, but our education system often reinforces the idea that a straight line on a flat map is the shortest distance between two points. In reality, because the Earth is a sphere, the shortest path, known as a Great Circle route, actually curves toward the poles when flattened onto a Mercator map. Seeing the Aurora Borealis was my first real-world hint that the "straight" lines of my childhood were an architectural illusion.
 
 ![Description of image](/assets/images/mercator/path.png)
 
