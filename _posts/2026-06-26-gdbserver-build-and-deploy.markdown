@@ -3,6 +3,9 @@ layout: post
 title:  "Cross-Compiling gdbserver for a MIPS Router with Buildroot"
 date:   2026-06-26 00:00:00 +0530
 categories: embedded debugging gdb mips buildroot
+image:
+  path: /assets/images/gdbserver/gdb-tui-registers-prologue.png
+  alt: GDB TUI showing MIPS registers and disassembly after hitting a breakpoint
 ---
 When you're reverse engineering an embedded device, sooner or later you want to attach
 a debugger to something running live on the hardware. The problem: your laptop is

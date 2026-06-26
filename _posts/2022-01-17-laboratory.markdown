@@ -3,6 +3,9 @@ layout: post
 title:  "A laboratory in your hands!"
 date:   2022-01-17 11:20:10 +0530
 categories: lab phone
+image:
+  path: /assets/images/lab/phyphox-breathing-accelerometer.png
+  alt: Phyphox accelerometer Y-axis showing breathing rhythm during a 5-minute run
 ---
 
 Smartphones have come a long way in the last decade. They only used to do one 

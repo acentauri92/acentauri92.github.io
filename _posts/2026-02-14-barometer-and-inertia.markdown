@@ -3,6 +3,9 @@ layout: post
 title:  "Newton's first law and the Barometer"
 date:   2026-02-14 00:00:00 +0530
 categories: newton pressure phyphox
+image:
+  path: /assets/images/inertia/phyphox-z-acceleration.png
+  alt: Phyphox Z-axis accelerometer plot recorded during an MRT ride, showing vibration during braking
 ---
 Some physics lessons arrive in a classroom. Others arrive as a breeze on your shoulder.
 

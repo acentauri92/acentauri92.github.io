@@ -3,6 +3,9 @@ layout: post
 title:  "The Linux Kernel and swear words"
 date:   2020-12-12 11:20:10 +0530
 categories: linux kernel
+image:
+  path: /assets/images/linux/kernel-contributions-chart.png
+  alt: Chart showing Linux kernel contributions by company over time — Red Hat, Google, Oracle, Apple, Microsoft
 ---
 
 A while ago, while browsing through the Linux 5.13 source, I came across several 

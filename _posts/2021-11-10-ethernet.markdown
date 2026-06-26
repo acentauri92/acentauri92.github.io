@@ -3,21 +3,18 @@ layout: post
 title:  "Identifying Gigabit ethernet!"
 date:   2021-11-10 11:20:10 +0530
 categories: ethernet networking
+image:
+  path: /assets/images/ethernet/ethernet-ports-cover.png
+  alt: Close-up of RJ45 ethernet ports on a PCB showing all eight metallic contacts of a gigabit-capable router
 ---
 
-Ever wonder if your router is gigabit-capable or not? There is a quick and easy 
-way to find out. If you flip over your router and check its LAN ports, you’ll 
+Ever wonder if your router is gigabit-capable or not? There is a quick and easy
+way to find out. If you flip over your router and check its LAN ports, you’ll
 see that there are metallic contacts inside them.
 
-In the image below, you’ll see that out of the eight slots available, only four 
-of them have metal contacts. The image is that of a 100Mbps capable router and 
-the four pins used are the two sets of differential transmit and receive pins 
-(Tx+, Tx-, Rx+, Rx-).
-
-![Description of image](/assets/images/ethernet/ethernet_1.jpeg){:width="600px" height="400px" style="border-radius: 10px; display: block; margin: 0 auto;"}
-
-The following image shows the same LAN ports but that of a 1Gbps capable router 
-and you can see that all eight slots have metallic contacts. Image 3 shows the 
+A 100Mbps capable router uses only four of the eight available slots — the two
+differential transmit and receive pairs (Tx+, Tx-, Rx+, Rx-). The following image
+shows a 1Gbps capable router where all eight slots have metallic contacts. Image 3 shows the 
 pinout of a RJ45 connector and you can see how the eight pins are used in a 
 100Mbps and a 1Gbps connection.
 
