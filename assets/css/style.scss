@@ -1,3 +1,127 @@
+---
+---
+
 p {
   text-align: justify;
 }
+
+/* Photography page grid */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-top: 1.5rem;
+
+  .photo-item {
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 4px;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.04);
+      opacity: 0.9;
+    }
+
+    .shimmer {
+      &::before {
+        display: none;
+      }
+    }
+
+    cursor: pointer;
+  }
+}
+
+/* Suppress Chirpy shimmer inside the lightbox */
+#photo-lightbox .shimmer::before {
+  display: none !important;
+}
+
+/* Custom photo lightbox */
+#photo-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+
+  &.open {
+    display: flex;
+  }
+
+  .lb-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90vw;
+    max-height: 90vh;
+
+    img {
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+  }
+
+  .lb-caption {
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    text-align: center;
+    font-style: italic;
+  }
+
+  .lb-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: white;
+    font-size: 2rem;
+    line-height: 1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+    &:hover { opacity: 1; }
+  }
+
+  .lb-prev,
+  .lb-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 3rem;
+    line-height: 1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    opacity: 0.6;
+    &:hover { opacity: 1; }
+  }
+
+  .lb-prev { left: 0.5rem; }
+  .lb-next { right: 0.5rem; }
+}
+
