@@ -1,43 +1,23 @@
-# Chirpy Starter
+# dheeraj-reddy.in
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+Personal blog and portfolio — notes on embedded systems, Linux kernel work, reverse engineering, and things that caught my curiosity.
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
-`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
-from the theme's gem. If you have ever installed this theme gem, you can use the command
-`bundle info --path jekyll-theme-chirpy` to locate these files.
+**Live site:** [dheeraj-reddy.in](https://dheeraj-reddy.in)
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
-able to enjoy the out-of-the-box experience when using feature-rich themes.
+## What's here
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
-Jekyll site. The following is a list of targets:
+- **Blog posts** — embedded systems, Linux, reverse engineering
+- **Conference Talks** — slides and recordings from talks I've given
+- **Photography** — a collection of shots from travels and everyday life
+- **Contact** — a contact form (no email address exposed)
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
-```
+## Built with
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
-latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+This site uses the [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy) theme for Jekyll. If you want to build something similar, the easiest way to get started is the [Chirpy Starter template](https://github.com/cotes2020/chirpy-starter) — fork it, configure `_config.yml`, and you're writing in minutes.
 
-## Usage
-
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
-
-## Contributing
-
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
+- [Chirpy theme docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki)
+- [Chirpy on RubyGems](https://rubygems.org/gems/jekyll-theme-chirpy)
 
 ## License
 
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+Content © Dheeraj Jonnalagadda. Theme licensed under [MIT](https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE).
