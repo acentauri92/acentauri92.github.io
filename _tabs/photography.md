@@ -3,7 +3,7 @@ layout: page
 title: Photography
 description: A collection of photographs from my travels and everyday life.
 icon: fas fa-camera
-order: 5
+order: 2
 ---
 
 <div class="photo-grid">

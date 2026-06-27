@@ -5,6 +5,61 @@ p {
   text-align: justify;
 }
 
+/* Talks page */
+.talks-list {
+  margin-top: 1rem;
+
+  .talk-entry {
+    margin-bottom: 3rem;
+
+    .talk-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .talk-meta {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+
+      .talk-event {
+        font-weight: 600;
+        color: var(--link-color);
+      }
+
+      .talk-details {
+        color: var(--text-muted-color);
+      }
+
+      .talk-slides {
+        font-size: 0.95rem;
+        text-decoration: none;
+        i { margin-right: 0.25rem; }
+      }
+    }
+
+    .talk-video {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
 /* Photography page grid */
 .photo-grid {
   display: grid;

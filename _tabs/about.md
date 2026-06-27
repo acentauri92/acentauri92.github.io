@@ -1,7 +1,7 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 4
+order: 3
 ---
 
 I’m an engineer whose curiosity never quits - always tinkering and exploring beyond my day job. I’ve got a soft spot for astronomy (stargazing never gets old!), antenna design (yes, I geek out over signal patterns), and getting my hands dirty in the garden.
