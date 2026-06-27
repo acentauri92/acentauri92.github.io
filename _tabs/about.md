@@ -12,3 +12,5 @@ This blog is where I write about things I dig into — embedded systems, reverse
 Outside of work, I speak at open source conferences — most recently at Open Source Summit India by the Linux Foundation. You can find my talks and slides on the [Conference Talks](/talks/) page.
 
 I'm also an amateur astronomer who can name every constellation in the sky, a cricket fan who watches every ball of every televised match, and someone who finds gardening surprisingly therapeutic. I enjoy photography too — you can find some of my shots [here](/photography/).
+
+If you want to get in touch, the [Contact](/contact/) page is the best way to reach me.

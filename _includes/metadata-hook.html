@@ -1,1 +1,11 @@
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a[href^="http://"], a[href^="https://"]').forEach(function (link) {
+      if (link.hostname !== window.location.hostname) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      }
+    });
+  });
+</script>
