@@ -42,3 +42,8 @@
 - type: Hackster
   icon: 'fas fa-microchip' # This is a standard Font Awesome icon
   url: 'https://www.hackster.io/acentauri92'
+
+- type: contact
+  icon: 'fas fa-paper-plane'
+  url: '/contact/'
+  noblank: true
