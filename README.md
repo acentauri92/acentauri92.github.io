@@ -9,7 +9,7 @@ Personal blog and portfolio — notes on embedded systems, Linux kernel work, re
 - **Blog posts** — embedded systems, Linux, reverse engineering
 - **Conference Talks** — slides and recordings from talks I've given
 - **Photography** — a collection of shots from travels and everyday life
-- **Contact** — a contact form (no email address exposed)
+- **Contact** — a contact form
 
 ## Built with
 
