@@ -5,6 +5,14 @@ p {
   text-align: justify;
 }
 
+/* Match # whoami sidebar label to other nav items */
+#sidebar .nav-label-custom {
+  font-family: Lato, "Microsoft Yahei", sans-serif;
+  font-size: 90%;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
 /* Talks page */
 .talks-list {
   margin-top: 1rem;

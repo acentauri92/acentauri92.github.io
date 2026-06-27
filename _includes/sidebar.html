@@ -31,8 +31,13 @@
           <a href="{{ tab.url | relative_url }}" class="nav-link">
             <i class="fa-fw {{ tab.icon }}"></i>
             {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
+            {% assign locale_label = site.data.locales[include.lang].tabs.[tab_name] %}
 
-            <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
+            {% if tab_name == 'about' %}
+              <span class="nav-label-custom">{{ tab.title }}</span>
+            {% else %}
+              <span>{{ locale_label | default: tab.title | upcase }}</span>
+            {% endif %}
           </a>
         </li>
         <!-- .nav-item -->
