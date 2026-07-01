@@ -11,6 +11,18 @@ Personal blog and portfolio — notes on embedded systems, Linux kernel work, re
 - **Photography** — a collection of shots from travels and everyday life
 - **Contact** — a contact form
 
+## Usage & maintenance
+
+See **[USAGE.md](USAGE.md)** for a full reference guide covering:
+
+- Running the site locally
+- Everything that was changed from base Chirpy and why
+- How to add blog posts, photos, and conference talks
+- How to replicate this setup on a fresh Chirpy install
+- Generating and applying a patch
+- Third-party services (Formspree, GA, Disqus)
+- Chirpy quirks and hard-won fixes
+
 ## Built with
 
 This site uses the [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy) theme for Jekyll. If you want to build something similar, the easiest way to get started is the [Chirpy Starter template](https://github.com/cotes2020/chirpy-starter) — fork it, configure `_config.yml`, and you're writing in minutes.
