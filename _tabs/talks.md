@@ -13,6 +13,9 @@ order: 1
     <p class="talk-meta">
       <a class="talk-event" href="https://events.linuxfoundation.org/open-source-summit-india/" target="_blank" rel="noopener">Open Source Summit India 2026</a>
       <span class="talk-details">Mumbai, India &middot; June 16–17, 2026</span>
+      <a class="talk-slides" href="https://hosted-files.sched.co/ossindia2026/d4/OSS_India_2026_Dont_Trash_it_Hack%20it_Dheeraj_Jonnalagadda.pdf" target="_blank" rel="noopener">
+        <i class="fas fa-file-pdf"></i> Slides
+      </a>
     </p>
     <div class="talk-video">
       <iframe
