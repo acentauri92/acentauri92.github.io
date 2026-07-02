@@ -9,6 +9,23 @@ order: 1
 <div class="talks-list">
 
   <div class="talk-entry">
+    <h2 class="talk-title">Reading the Machine: MIPS Assembly and the Secrets Inside ISP Routers</h2>
+    <p class="talk-meta">
+      <a class="talk-event" href="https://events.linuxfoundation.org/open-source-summit-india/" target="_blank" rel="noopener">Open Source Summit India 2026</a>
+      <span class="talk-details">Mumbai, India &middot; June 16–17, 2026</span>
+    </p>
+    <div class="talk-video">
+      <iframe
+        src="https://www.youtube.com/embed/XDi4mLnJX9M"
+        title="Reading the Machine: MIPS Assembly and the Secrets Inside ISP Routers — Open Source Summit India 2026"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
+  <div class="talk-entry">
     <h2 class="talk-title">Hack ISP Routers: Reverse Engineering and repurposing routers</h2>
     <p class="talk-meta">
       <a class="talk-event" href="https://eventyay.com/ev/88882f3e/" target="_blank" rel="noopener">FOSSASIA 2026</a>
