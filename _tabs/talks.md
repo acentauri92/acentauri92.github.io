@@ -6,6 +6,8 @@ icon: fas fa-microphone
 order: 1
 ---
 
+I occasionally speak at open source conferences about embedded systems, reverse engineering, and whatever rabbit hole I've most recently fallen into. Here's a collection of those talks, along with slides and recordings where available.
+
 <div class="talks-list">
 
   <div class="talk-entry">

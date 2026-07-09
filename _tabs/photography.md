@@ -6,6 +6,8 @@ icon: fas fa-camera
 order: 2
 ---
 
+A few shots from my travels and everyday life — mostly landscapes, night skies, and whatever else catches my eye along the way.
+
 <div class="photo-grid">
   {% for photo in site.data.photos %}
     <div
