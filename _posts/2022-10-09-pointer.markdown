@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A pointer to a pointer to a what?"
+title: "A pointer to a pointer to a what?"
 date:   2022-10-09 1:20:10 +0530
 categories: C programming
 image:

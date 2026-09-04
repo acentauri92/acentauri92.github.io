@@ -212,7 +212,7 @@ Take `0x3c1c0003`:
 Matches `lui $gp, 0x3` exactly.
 
 This is also the three-instruction sequence you can watch execute live under
-`gdbserver` — each `si` step in [the remote debugging session](/posts/gdbserver-build-and-deploy/#stepping-through-the-function-prologue----watching-gp-get-set-up)
+`gdbserver` — each `si` step in [the remote debugging session](/posts/gdbserver-build-and-deploy/#stepping-through-the-function-prologue--watching-gp-get-set-up)
 updates the register pane and makes the calculation concrete.
 
 ### Why $gp gets saved and restored constantly
