@@ -1,0 +1,109 @@
+---
+layout: post
+title:  "What is TPMS? Tyre sensors and the most underrated screen in your car"
+date:   YYYY-MM-DD 00:00:00 +0530
+categories: tpms rf privacy
+description: ""
+# image:
+#   path: /assets/images/tpms/FILENAME.png
+#   alt: ""
+---
+
+If you've ever driven a car, you must have seen this or a similar kind of display.
+
+![Tyre pressure screen and the TPMS warning on my i20's instrument cluster](/assets/images/tpms/tpms-dashboard-collage.jpg){: w="600" }
+_Left: the tyre pressure screen. Right: the warning I got when one of my sensors broke._
+
+In my opinion, this is the most underrated display in cars. In my car, I have
+to press the mode button a few times before I even get to this screen. The
+warning screen also pops up on its own when something goes wrong, like a tyre
+losing pressure or a problem with the system itself. In my case, it was the
+second one. One of my sensors broke, and the car flagged it as a system fault.
+Normally, it shows the air pressure of each tyre, like in the image above.
+
+It is necessary to monitor this on a regular basis to keep your tyres in good
+condition and make them last longer. It is also quite important for safety, as
+under or over inflated tyres can cause loss of control and lead to accidents.
+This is the reason why many countries have made the tyre pressure monitoring
+system (TPMS) mandatory in cars. For example, in the United States, China and
+the EU, it is mandatory for all new cars.
+
+The US was the first to do this. The [TREAD Act][tread-act] was passed in 2000,
+after a series of Ford Explorer rollovers in the late 90s were linked to tyre
+failures. [FMVSS 138][fmvss-138] is the actual rule that came out of it. It says
+the warning light must come on when a tyre drops 25% below the pressure written
+on the sticker on your door.
+
+The EU made it mandatory for all new passenger cars sold from November 2014,
+under [Regulation 661/2009][eu-661]. China did the same with
+[GB 26149-2017][gb-26149], and from January 2020 every new passenger car there
+needs one.
+
+India is a different story. There is a standard, [AIS-154][ais-154], which
+tells manufacturers how a TPMS must behave if they fit one. But as of writing
+this, it is not mandatory for all new cars. My i20 has it because Hyundai chose
+to put it in, not because of the law.
+
+But before we get into the details, it helps to know that there are essentially
+two types of TPMS.
+
+## Kinds of TPMS
+
+### 1. Indirect TPMS
+
+This is a system where the car uses the wheel speed sensors that are already
+there for the ABS (anti-lock braking system) to figure out the tyre pressure.
+Wait... but how do you take the wheel speed and get the pressure of the tyre?
+
+This is where we use physics.
+
+Inflating or deflating a tyre changes its diameter. Inflating increases it and
+deflating decreases it. Now, an under inflated tyre has a smaller diameter, so
+it must spin faster than the other wheels to cover the same distance as the
+properly inflated tyres. Similarly, an over inflated tyre must spin slower to
+cover the same distance. The ABS control unit senses these slight changes in
+wheel speed to see if a tyre is inflated properly or not. It does not measure
+the actual pressure, but it can tell when one tyre is off compared to the
+others. This saves cost, as there is no extra hardware needed inside the wheels.
+
+<!-- Claude: added from here -->
+But there is a catch. Since it only compares the wheels to each other, if all
+four tyres lose air slowly at the same rate, they all keep spinning at the same
+speed and the system does not notice anything. This was a big enough problem
+that a US court threw out the first version of FMVSS 138 in 2003, because it
+allowed systems that could miss exactly this case.
+
+### 2. Direct TPMS
+
+This is the kind my i20 has. Here, each wheel has its own small sensor inside
+the tyre, usually attached to the back of the valve stem, the same valve you
+use to fill air. The sensor measures the actual pressure and temperature inside
+the tyre, so unlike the indirect system, it does not have to guess.
+
+![Diagram of a direct TPMS: a sensor in each tyre sending readings by radio to a receiver module, which drives the dashboard warning light](/assets/images/tpms/direct-tpms-diagram.jpg){: w="600" }
+_Direct TPMS: a sensor in each tyre talks to a receiver in the car. Image:
+[Performance Plus Tire][ppt-tpms]._
+
+The sensor runs on a small battery sealed inside it, which usually lasts around
+5 to 10 years. You cannot change the battery, so when it dies or the sensor
+breaks, you replace the whole thing. That is exactly what happened with mine and
+we will cover this in the next post.
+
+So how does the sensor get the reading to the car? It cannot use a wire,
+because the wheel is spinning. Instead, it sends it over radio. In India and
+Europe, this is usually on 433.92 MHz, and in the US it is usually 315 MHz.
+While you are driving, each sensor sends a small packet to the car's control unit
+and that inturn decodes teh packet and displays the data on the car display
+unti.
+
+And here is the interesting part. These packets are not encrypted. The car just listens for its own IDs, but anyone
+else with a cheap radio can listen too. That is what the rest of this series is
+about.
+
+[tread-act]: https://www.govinfo.gov/content/pkg/PLAW-106publ414/html/PLAW-106publ414.htm
+[fmvss-138]: https://www.law.cornell.edu/cfr/text/49/571.138
+[eu-661]: https://eur-lex.europa.eu/eli/reg/2009/661/oj
+[gb-26149]: https://www.chinesestandard.net/PDF.aspx/GB26149-2017
+[ais-154]: https://morth.gov.in/sites/default/files/ASI/524201920344PMAIS_154_F_0.pdf
+
+[ppt-tpms]: https://www.performanceplustire.com/Blog/tire-pressure-monitoring-system-tpms-everything-you-need-to-know
