@@ -4,9 +4,10 @@ title:  "What is TPMS? Tyre sensors and the most underrated screen in your car"
 date:   YYYY-MM-DD 00:00:00 +0530
 categories: tpms rf privacy
 description: ""
-# image:
-#   path: /assets/images/tpms/FILENAME.png
-#   alt: ""
+image:
+  path: /assets/images/tpms/tpms-intro-preview.jpg
+  alt: "Tyre pressure screen on my i20's instrument cluster showing the pressure of each tyre in psi"
+hide_banner: true
 ---
 
 If you've ever driven a car, you must have seen this or a similar kind of display.
