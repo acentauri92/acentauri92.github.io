@@ -1,0 +1,27 @@
+<!-- Display GoatCounter pageviews.
+  Local override of Chirpy 7.6.0 (_includes/pageviews/goatcounter.html):
+  if the count can't be loaded (e.g. Brave Shields or an ad blocker blocks
+  goatcounter.com), remove the "views" item instead of showing a fake "1". -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const pv = document.getElementById('pageviews');
+
+    if (pv !== null) {
+      const uri = location.pathname.replace(/\/$/, '');
+      const url = `https://{{ site.analytics.goatcounter.id }}.goatcounter.com/counter/${encodeURIComponent(uri)}.json`;
+
+      fetch(url)
+        .then((response) => {
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          return response.json();
+        })
+        .then((data) => {
+          const count = data.count.replace(/\D/g, '');
+          pv.innerText = new Intl.NumberFormat().format(count);
+        })
+        .catch(() => {
+          pv.parentElement.remove();
+        });
+    }
+  });
+</script>
