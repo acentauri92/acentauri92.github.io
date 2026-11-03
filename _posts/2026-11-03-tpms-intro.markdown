@@ -1,9 +1,11 @@
 ---
 layout: post
 title:  "What is TPMS? Tyre sensors and the most underrated screen in your car"
-date:   YYYY-MM-DD 00:00:00 +0530
+date:   2026-11-03 09:00:00 +0530
 categories: tpms rf privacy
-description: ""
+description: >-
+  What TPMS is, why many countries made it mandatory, how indirect and direct
+  systems differ, and the unencrypted radio packets your tyres send out.
 image:
   path: /assets/images/tpms/tpms-intro-preview.jpg
   alt: >-
