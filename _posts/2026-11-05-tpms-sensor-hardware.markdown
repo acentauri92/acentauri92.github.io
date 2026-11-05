@@ -271,5 +271,5 @@ Stay tuned.
 [fccid]: https://fccid.io/
 [fcc-old]: https://fccid.io/MRXAFFPA4
 [fcc-new]: https://fccid.io/MRXBG6FD4
-[fcc-old-report]: https://fccid.io/MRXAFFPA4/Test-Report/Test-Report-452883
+[fcc-old-report]: https://fccid.io/MRXAFFPA4/Test-Report/Test-Report-4528836
 [fcc-15231]: https://www.law.cornell.edu/cfr/text/47/15.231
