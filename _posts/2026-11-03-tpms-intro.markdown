@@ -123,14 +123,15 @@ series is about.
 
 **Coming up in this series:**
 
-- What is inside the sensor hardware
-- Replacing the broken sensor in my car
+- [What is inside the sensor hardware][part-2] (Part 2)
+- [Replacing the broken sensor in my car][part-2] (Part 2)
 - Why the sensor measures temperature
 - Collecting this data using cheap hardware and doing all kinds of data analysis
   on it
 
 Stay tuned.
 
+[part-2]: {% post_url 2026-11-05-tpms-sensor-hardware %}
 [tread-act]: https://www.govinfo.gov/link/plaw/106/public/414
 [fmvss-138]: https://www.law.cornell.edu/cfr/text/49/571.138
 [eu-661]: https://eur-lex.europa.eu/eli/reg/2009/661/oj
