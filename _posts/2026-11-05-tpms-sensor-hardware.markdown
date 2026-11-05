@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Inside a TPMS sensor: a broken tyre sensor and a day at the workshop"
-# date: set when publishing (in the past), e.g. 2026-11-10 09:00:00 +0530
+date:   2026-11-05 08:30:00 +0530
 categories: tpms rf hardware
 description: >-
   What is inside a TPMS sensor, what its FCC filing reveals, and what happened
@@ -13,15 +13,6 @@ image:
     of the sensor body
 hide_banner: true
 ---
-<!--
-  Part 2 of the TPMS series. Part 1 promised, in order:
-  1. What is inside the sensor hardware   <- this post
-  2. Replacing the broken sensor in my car
-  3. Why the sensor measures temperature
-  4. Collecting the data with cheap hardware + data analysis
-  Talk slides used: 10-16.
--->
-
 So in the [first blog post][part-1], we have seen what a tyre pressure
 monitoring system (TPMS) is and how it helps prolong the life of your car tyres
 and improve safety. We have also seen that there are two types of systems:
@@ -89,12 +80,12 @@ _The quote for replacing my sensor with the original part._
 
 ## A day out in the workshop
 
-Replacing a TPMS sensor is not as simple as it sounds. The wheel has to come
-off the car, and the tyre has to come off the rim. Then the old valve and
-sensor are removed, the new one is fitted, and the tyre goes back on and gets
-inflated. But that is not the end. The car does not know about the new sensor
-yet, and it will ignore it until it is told. So the workshop plugged a tool
-into the car's OBD port and registered the new sensor's ID for that wheel.
+Replacing a TPMS sensor is not as simple as it sounds. The wheel has to come off
+the car, and the tyre has to come off the rim. Then the old valve and sensor are
+removed, the new one is fitted, and the tyre goes back on and gets inflated. But
+that is not the end. The car does not know about the new sensor yet, and it will
+simply ignore it until it is told. So the workshop plugged a tool into the car's
+OBD port and registered the new sensor's ID for that wheel.
 
 ![The workshop's OBD tool screen titled "Modify sensor ID and press the OK
 button", with a table of current and new sensor IDs for the front left, front
@@ -106,16 +97,17 @@ This screen shows the ID of every sensor in my car, and more importantly, which
 wheel each one belongs to. These are the same IDs that are printed on the
 sensors, and the same IDs each sensor sends out over the air in every packet.
 
-The funny part is that I already knew this. Before the workshop visit, I had
-worked out which ID belongs to which tyre for my original sensors, just by
-listening to the radio signals from my car. The OBD tool matched it exactly.
-How I did that is a story for a later post in this series.
+The interesting part is that I already knew this. Before the workshop visit, I
+had worked out which ID belongs to which tyre for my original sensors, just by
+listening to the radio signals from my car and doing a few experiments. The OBD
+tool matched it exactly. How I did that is a story for a later post in this
+series.
 
 ![Three photos from the workshop: my car up on a lift with the front wheel
 removed, the workshop crew working on the tyre, and the new sensor in my
 hand][workshop-day]{: w="600" }
 _A day out in the workshop: my i20 on the lift, the crew at work, and the new
-sensor. Number plate and sensor ID blurred._
+sensor. Sensor ID blurred._
 
 I sat there with them for the whole day, watching them work and taking photos.
 And that is how I got my hands on both the old and the new sensor. That is
@@ -124,17 +116,18 @@ where the fun begins.
 ## A TPMS sensor
 
 The sensor is a small, lightweight device that looks like the one in the image
-below. This is the replacement sensor that was fitted in my car recently.
+below. This is the replacement sensor that was fitted in my car recently. You
+will be surprised how light this sensor actually is.
 
 ![The new TPMS sensor in my hand, with its rubber valve stem attached to the
 sensor body][sensor-new]{: w="400" }
-_The new sensor, with the valve stem attached. It is made by Schrader
+_The new sensor, with the valve stem attached, made by Schrader
 Electronics._
 
 As we saw in the [first blog post][part-1], the sensor measures pressure and
 temperature. It also has an accelerometer inside that detects when the tyre is
-moving. But how do we know it has all of this? The car display only shows us
-the pressure.
+moving. But how do we know it has all of this? Some cars display pressure and
+temperature, but most cars only display pressure.
 
 The two sensors I brought back from the workshop gave me an important clue.
 Both of them have an FCC ID printed on them.
@@ -159,12 +152,12 @@ fitted a different model as the replacement.
 ## Reading the label
 
 Take a closer look at the label on the new sensor. Apart from the FCC ID, there
-is a lot packed onto it. 433 MHz is the frequency it transmits on, which we saw
+is a lot printed on it. 433 MHz is the frequency it transmits on, which we saw
 in the first post. The line starting with ID is the sensor's own ID. It is
 unique to each sensor and goes out in every packet it sends, so the car knows
 which tyre the reading came from. Since the packets are not encrypted, anyone
-listening could use this ID to recognise my car, so I blurred it. We'll come
-back to this ID later in the series.
+listening could use this ID to recognise my car, so, for obvious reasons, I
+blurred it. We'll come back to this ID later in the series.
 
 The rest of the label is approval marks from different countries: CE for
 Europe, IC for Canada, ANATEL for Brazil, IFT for Mexico, EAC for Russia and its
@@ -229,19 +222,19 @@ the board and battery (right). Image: [FCC test report,
 MRXAFFPA4][fcc-old-report]._
 
 Most of the work is done by the one big chip in the middle of the board. TPMS
-chips like this usually pack everything into a single package: the pressure
-sensor, a temperature sensor, an accelerometer, a small microcontroller and the
-radio transmitter. If you look closely, you can see a tiny hole on top of the
-chip. That is where the air from the tyre gets in to reach the pressure sensor.
+chips like this usually pack everything into a single custom package: the
+pressure sensor, a temperature sensor, an accelerometer, a small microcontroller
+and the radio transmitter. If you look closely, you can see a tiny hole on top
+of the chip. That is where the air from the tyre gets in to reach the pressure
+sensor.
 
 The chip also has a low frequency (LF) receiver. That is how the tool at the
 workshop can wake the sensor up and ask it to send its data. The test report
 mentions this too, as the "LF Activated LEARN" mode.
 
-And then there is the battery. It is not in a holder like the one in your TV
-remote. It is welded directly to the circuit board with metal tabs. So when the
-battery dies after 5-10 years, you cannot just swap it out. You replace the
-whole sensor.
+And then there is the battery. It is welded directly to the circuit board with
+metal tabs. So when the battery dies after 5-10 years, you cannot just swap it
+out. You replace the whole sensor.
 
 To make the battery last that long, the sensor spends most of its time doing
 nothing. This is where the accelerometer helps. When the car is parked, the
@@ -264,7 +257,6 @@ with the valve.
 
 Stay tuned.
 
-<!-- Image refs (assets/images/tpms/, {: w="600" }, italic caption below) -->
 [sensor-mounted]: /assets/images/tpms/tpms-sensor-mounted.jpg
 [sensor-new]: /assets/images/tpms/tpms-sensor-new.jpg
 [sensor-old-new]: /assets/images/tpms/tpms-sensor-old-new.jpg
@@ -275,10 +267,9 @@ Stay tuned.
 [workshop-day]: /assets/images/tpms/workshop-day.jpg
 [sensor-quote]: /assets/images/tpms/sensor-quote.png
 [obd-ids]: /assets/images/tpms/obd-sensor-ids.jpg
-<!-- Link refs -->
 [part-1]: {% post_url 2026-11-03-tpms-intro %}
 [fccid]: https://fccid.io/
 [fcc-old]: https://fccid.io/MRXAFFPA4
 [fcc-new]: https://fccid.io/MRXBG6FD4
-[fcc-old-report]: https://fccid.io/MRXAFFPA4/Test-Report/Test-Report-4528836
+[fcc-old-report]: https://fccid.io/MRXAFFPA4/Test-Report/Test-Report-452883
 [fcc-15231]: https://www.law.cornell.edu/cfr/text/47/15.231
