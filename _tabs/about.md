@@ -5,9 +5,44 @@ icon: fas fa-info-circle
 order: 3
 ---
 
+<img src="/assets/images/about-cover.jpg"
+     alt="Me speaking on stage at FOSSASIA, with the audience in the foreground"
+     class="about-cover">
+
+<style>
+  .about-cover {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 0 1.75rem;
+    border-radius: 0;
+    box-shadow: none;
+    /* fade all four edges into whatever the page background is (light or dark) */
+    -webkit-mask-image:
+      linear-gradient(to right, transparent 0%, #000 4%, #000 96%, transparent 100%),
+      linear-gradient(to bottom, transparent 0%, #000 3%, #000 93%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+      linear-gradient(to right, transparent 0%, #000 4%, #000 96%, transparent 100%),
+      linear-gradient(to bottom, transparent 0%, #000 3%, #000 93%, transparent 100%);
+    mask-composite: intersect;
+    background: transparent !important;
+  }
+  /* the theme wraps images in a link with a grey placeholder; hide it here */
+  a.img-link:has(> .about-cover) {
+    display: block;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  a.img-link:has(> .about-cover)::before,
+  a.img-link:has(> .about-cover)::after {
+    display: none !important;
+  }
+</style>
+
 I'm a software engineer at [Pixxel](https://www.pixxel.space/), where I work on building satellites — specifically the flight computers that run them. I'm also a Linux kernel contributor, which has taken me down more rabbit holes than I can count.
 
-This blog is where I write about things I dig into — embedded systems, reverse engineering, debugging deep in the stack, and occasionally something completely unrelated. If you've ever wondered how your ISP router actually works, or why that kernel driver is misbehaving at 3am, you'll feel right at home here.
+This blog is where I write about things I dig into — embedded systems, reverse engineering, radio, debugging deep in the stack, and occasionally something completely unrelated. I also love data analysis: collecting real-world data, plotting it and finding the stories hidden in it. My [TPMS series](/posts/tpms-intro/) is a good example — it started with a cheap radio dongle listening to the tyres of passing cars and turned into months of data and a lot of plots. If you've ever wondered how your ISP router actually works, why that kernel driver is misbehaving at 3am, or what your car's tyres are saying about you, you'll feel right at home here.
 
 Outside of work, I speak at open source conferences — most recently at Open Source Summit India by the Linux Foundation. You can find my talks and slides on the [Conference Talks](/talks/) page.
 
