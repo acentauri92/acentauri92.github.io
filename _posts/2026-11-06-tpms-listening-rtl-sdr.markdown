@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Every tyre is a radio station: listening to TPMS with an RTL-SDR"
-# date: set when publishing (in the past), e.g. 2026-11-12 09:00:00 +0530
+date:   2026-11-06 10:00:00 +0530
 categories: tpms rf sdr
 description: >-
   Listening to tyre pressure sensors with a cheap RTL-SDR: first captures with
@@ -13,17 +13,6 @@ image:
     its frequency switching between two levels
 hide_banner: true
 ---
-<!--
-  Part 3 of the TPMS series: an intro to what we can capture.
-  Scope: the RTL-SDR, first experiments with rtl_433, recording IQ and
-  opening it in GNU Radio. Decoding the packet bits comes in a later post.
-  Talk slides: 6, 7, 9, 18, 19 (8 = glovebox lab, maybe just a teaser).
-  IQ examples: do NOT use my own car's recordings. Use a public sample from
-  the rtl_433 test repo (~/rtl_433_tests/tests/, e.g. Toyota_TPMS,
-  Renault_TPMS, Citroen_TPMS; NOT Schrader_FSK_Hyundai = my car). Credit and
-  link the repo (github.com/merbanan/rtl_433_tests; no licence file found).
--->
-
 In the [last blog][part-2], we went through what is inside a TPMS sensor and
 dug through its FCC filings to learn what it does and how it sends its data to
 the car's control unit. We have also seen that the packets are not encrypted,
@@ -296,7 +285,6 @@ bits and bytes.
 
 Stay tuned.
 
-<!-- Image refs (assets/images/tpms/, {: w="600" }, italic caption below) -->
 [rtl-sdr-kit]: /assets/images/tpms/rtl-sdr-kit.jpg
 [papers]: /assets/images/tpms/tpms-papers.jpg
 [first-capture]: /assets/images/tpms/rtl433-first-capture.png
@@ -306,7 +294,6 @@ Stay tuned.
 [census]: /assets/images/tpms/rf-device-census.png
 [flowgraph]: /assets/images/tpms/gnuradio-flowgraph.png
 [burst]: /assets/images/tpms/gnuradio-toyota-burst.png
-<!-- Link refs -->
 [part-2]: {% post_url 2026-11-05-tpms-sensor-hardware %}
 [osmocom-rtlsdr]: https://osmocom.org/projects/rtl-sdr/wiki
 [rtlsdr-buy]: https://www.rtl-sdr.com/buy-rtl-sdr/
