@@ -290,3 +290,9 @@ p {
   .lb-prev { left: 0.5rem; }
   .lb-next { right: 0.5rem; }
 }
+
+/* Image captions: keep them italic (the theme forces them upright) */
+.content a.popup + em,
+.content img + em {
+  font-style: italic;
+}

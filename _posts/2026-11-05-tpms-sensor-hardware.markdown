@@ -249,9 +249,9 @@ with the valve.
 
 **Coming up in this series:**
 
+- [Collecting this data using cheap hardware][part-3] (Part 3)
 - Why the sensor measures temperature
-- Collecting this data using cheap hardware and doing all kinds of data analysis
-  on it
+- Doing all kinds of data analysis on the data collected
 - Decoding the radio packets from my car, and how I worked out which sensor ID
   belongs to which tyre
 
@@ -268,6 +268,7 @@ Stay tuned.
 [sensor-quote]: /assets/images/tpms/sensor-quote.png
 [obd-ids]: /assets/images/tpms/obd-sensor-ids.jpg
 [part-1]: {% post_url 2026-11-03-tpms-intro %}
+[part-3]: {% post_url 2026-11-06-tpms-listening-rtl-sdr %}
 [fccid]: https://fccid.io/
 [fcc-old]: https://fccid.io/MRXAFFPA4
 [fcc-new]: https://fccid.io/MRXBG6FD4
