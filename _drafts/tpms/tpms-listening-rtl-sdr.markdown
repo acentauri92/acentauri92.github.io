@@ -166,8 +166,11 @@ _The Nooelec LaNA WB amplifier. Image: [Nooelec][lana]._
 
 ## What did we catch?
 
-I kept collecting data daily, on my way to work and back. I did this for a
-month or so, and then I started thinking about doing some data analysis on it.
+I kept collecting data daily, on my way to work and back. After a month or so,
+I started thinking about doing some data analysis on it. I have now been
+collecting data for almost the whole year, and I'm still at it. We will see all
+kinds of interesting stuff and data analysis on it in a later post. For now,
+here is a quick look at what we caught.
 
 ![A bar chart of distinct tyre sensors heard, by rtl_433 sensor type:
 Hyundai-VDO 1,607, Renault 599, Toyota 561, Schrader-EG53MA4 519, Citroen 157,
