@@ -99,9 +99,44 @@ with Manchester encoding, where every bit has a change in the
 middle][manchester]{: w="700" }
 *The same bits, sent plain and with Manchester encoding*
 
-This also explains the hops of two different widths in the spectrogram. When a
-bit is followed by a different one, the two halves in the middle land on the
-same frequency and merge into one longer step.
+### Differential Manchester
+
+The Toyota sensor in this post uses a variant called differential Manchester.
+There is still a change in the middle of every bit for the clock, but the bit
+itself is decided at the start, where a change at the start of the bit means a 0
+and no change means a 1 (again, some systems use the opposite). The direction of
+the change does not matter at all, the receiver only has to notice whether the
+signal changed or not.
+
+Why bother? Choosing between the two is a design decision. With plain
+Manchester the sensor and the receiver have to agree on which frequency is the
+"high" one, and that is easy when the same company designs both, which is why
+plain Manchester works perfectly well in many cars. It gets harder when the
+parts come from different makers. A car's receiver is usually built by one
+supplier and its sensors by another, and when a sensor dies you might replace
+it with an aftermarket one that is sold to work with dozens of car models. If
+any of these disagree on which frequency means a 1, plain Manchester decodes
+every bit as its opposite, while differential Manchester gives exactly the same
+bits because a change is still a change. So with differential Manchester the
+receiver only has to spot changes, and nobody has to agree on which way round
+the signal is.
+
+![The same bits sent with Manchester and differential Manchester, read by a
+receiver that matches the sensor and by one that has the two frequencies the
+other way round. Plain Manchester decodes every bit wrong on the mismatched
+receiver while differential Manchester gives the same
+bits][diff-manchester]{: w="700" }
+*When the receiver reads the frequencies the other way round, plain Manchester
+gets every bit wrong while differential Manchester still decodes the same bits*
+
+This also explains the hops of two different widths in the spectrogram. When
+there is no change at the start of a bit, the last half of one bit and the
+first half of the next land on the same frequency and merge into one longer
+step.
+
+If you want to see these encodings drawn out step by step, Jacob Schrum's
+video [Signal Encoding 1: Digital Signals][encoding-video]{:target="_blank"
+rel="noopener"} explains them really well.
 
 ## From bits to bytes: inside a packet
 
@@ -177,6 +212,8 @@ Stay tuned.
 [spectrogram]: /assets/images/tpms/tpms-spectrogram.png
 [ask-fsk]: /assets/images/tpms/tpms-ask-vs-fsk.png
 [manchester]: /assets/images/tpms/tpms-manchester.png
+[diff-manchester]: /assets/images/tpms/tpms-differential-manchester.png
+[encoding-video]: https://www.youtube.com/watch?v=i_TLLACZuRk&t=135s
 [toyota-packet]: /assets/images/tpms/tpms-toyota-packet.png
 [packet-lab]: /packet-lab/
 [lab-wake]: /packet-lab/?r=toyota-wake
