@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Reverse engineering my car's tyre sensors"
+date:   2026-11-07 11:30:00 +0530
 categories: tpms rf sdr
 description: >-
   How I reverse engineered my car's tyre sensors with an RTL-SDR, rtl_433's flex
@@ -94,7 +95,8 @@ in °C, which rises over the drive for all three and much faster for 861cd397,
 the front tyre][three-sensors]{: w="700" }
 *My three sensors on a drive, labelled with the positions I worked out. Top:
 the rear-left sits far above the others in the suspected pressure bytes. Bottom:
-the front tyre warms up much faster than the two rear ones*
+the front tyre warms up much faster than the two rear ones. Temperature is
+converted to °C using the calibration from the next post*
 
 A few days later I went to the workshop to get the new sensor fitted, and their
 OBD tool showed the ID registered for each wheel. All three matched what I had
