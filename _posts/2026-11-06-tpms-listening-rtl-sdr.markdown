@@ -272,13 +272,14 @@ right), and the frequency jumping between two levels during the packet
 (bottom). That pattern is the data: the sensor ID, the pressure and the
 temperature.
 
-So this is what rtl_433 sees every time a car passes by. In the next post, we
-will look at what FSK and modulation actually mean, and turn this signal into
-bits and bytes.
+So this is what rtl_433 sees every time a car passes by. In the [next
+post][part-4], we will look at what FSK and modulation actually mean, and turn
+this signal into bits and bytes.
 
 **Coming up in this series:**
 
-- What modulation and FSK are, and turning the raw signal into bits and bytes
+- [What modulation and FSK are, and turning the raw signal into bits and
+  bytes][part-4] (Part 4)
 - Building a surveillance lab in my glovebox to collect data on every drive
 - Why the sensor measures temperature
 - Doing all kinds of data analysis on the data collected
@@ -307,3 +308,4 @@ Stay tuned.
 [rtl433-tests]: https://github.com/merbanan/rtl_433_tests
 [toyota-sample]: https://github.com/merbanan/rtl_433_tests/tree/master/tests/Toyota_TPMS
 [gnuradio]: https://www.gnuradio.org/
+[part-4]: {% post_url 2026-11-06-tpms-fsk-packets %}

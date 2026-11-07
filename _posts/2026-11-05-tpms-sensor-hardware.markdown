@@ -100,8 +100,8 @@ sensors, and the same IDs each sensor sends out over the air in every packet.
 The interesting part is that I already knew this. Before the workshop visit, I
 had worked out which ID belongs to which tyre for my original sensors, just by
 listening to the radio signals from my car and doing a few experiments. The OBD
-tool matched it exactly. How I did that is a story for a later post in this
-series.
+tool matched it exactly. How I did that is a story for a [later post][part-5] in
+this series.
 
 ![Three photos from the workshop: my car up on a lift with the front wheel
 removed, the workshop crew working on the tyre, and the new sensor in my
@@ -252,8 +252,8 @@ with the valve.
 - [Collecting this data using cheap hardware][part-3] (Part 3)
 - Why the sensor measures temperature
 - Doing all kinds of data analysis on the data collected
-- Decoding the radio packets from my car, and how I worked out which sensor ID
-  belongs to which tyre
+- [Decoding the radio packets from my car, and how I worked out which sensor ID
+  belongs to which tyre][part-5] (Part 5)
 
 Stay tuned.
 
@@ -274,3 +274,4 @@ Stay tuned.
 [fcc-new]: https://fccid.io/MRXBG6FD4
 [fcc-old-report]: https://fccid.io/MRXAFFPA4/Test-Report/Test-Report-4528836
 [fcc-15231]: https://www.law.cornell.edu/cfr/text/47/15.231
+[part-5]: {% post_url 2026-11-07-tpms-reverse-engineering %}

@@ -126,8 +126,8 @@ series is about.
 - [What is inside the sensor hardware][part-2] (Part 2)
 - [Replacing the broken sensor in my car][part-2] (Part 2)
 - Why the sensor measures temperature
-- Collecting this data using cheap hardware and doing all kinds of data analysis
-  on it
+- [Collecting this data using cheap hardware][part-3] (Part 3) and doing all
+  kinds of data analysis on it
 
 Stay tuned.
 
@@ -144,3 +144,4 @@ Stay tuned.
 [dash-collage]: /assets/images/tpms/tpms-dashboard-collage.jpg
 [direct-diagram]: /assets/images/tpms/direct-tpms-diagram.jpg
 [tpms-warning]: /assets/images/tpms/indirect-tpms-warning.jpg
+[part-3]: {% post_url 2026-11-06-tpms-listening-rtl-sdr %}
