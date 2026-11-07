@@ -195,7 +195,8 @@ let the air out of my own tyre.
 
 **Coming up in this series:**
 
-- Decoding the packets from my own car and building a decoder for them
+- [Decoding the packets from my own car][part-5] (Part 5) and building a
+  decoder for them
 - The different modes of a sensor, and what happens when I let the air out of
   my tyre
 - Building a surveillance lab in my glovebox to collect data on every drive
@@ -221,3 +222,4 @@ Stay tuned.
 [lab-alarm]: /packet-lab/?r=subaru-alarm
 [packet-lab-img]: /assets/images/tpms/packet-lab.png
 [toyota-decoder]: https://github.com/merbanan/rtl_433/blob/master/src/devices/tpms_toyota.c
+[part-5]: {% post_url 2026-11-07-tpms-reverse-engineering %}
