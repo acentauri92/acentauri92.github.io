@@ -200,11 +200,11 @@ mean. This is exactly the approach the rtl_433 [guide to analyzing unknown
 devices][rtl433-analyze] recommends, and the full syntax is in the [flex decoder
 docs][rtl433-flex].
 
-The one thing I still needed was the symbol length, how long each symbol lasts. I
-didn't measure it at first, I just guessed. Many FSK tyre sensors in the rtl_433
-repository, including the Abarth and Ford decoders that had been decoding
-packets from my car, use 52 µs, so I tried that as a first experiment and ran
-rtl_433 on one of my recordings:
+The one thing I still needed was the symbol length, how long each symbol lasts.
+I didn't measure it at first, I just guessed. Many FSK tyre sensors in the
+rtl_433 repository, including the Abarth and Ford decoders that had been
+decoding packets from my car, use 52 µs, so I tried that as a first experiment
+and ran rtl_433 on one of my recordings:
 
 ```console
 rtl_433 -R 0 -X 'n=my_car,m=FSK_PCM,s=52,l=52,r=150' -r recording.cu8
