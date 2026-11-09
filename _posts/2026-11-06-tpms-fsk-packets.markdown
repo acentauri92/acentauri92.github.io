@@ -162,8 +162,9 @@ None of this is in a public datasheet, and the layout above comes from the
 [rtl_433 Toyota decoder][toyota-decoder], which people in the community worked
 out from their own captures. Turning these bits into actual PSI and °C, and
 working out which bits mean what in the first place, is something I had to do
-for the sensors on my own car. We will go through all of it in a later post,
-where we analyse my car's packets and build a decoder for them.
+for the sensors on my own car. We will go through all of it in [Part 5][part-5]
+and the post after it, where we analyse my car's packets and work out what every
+byte means.
 
 ## Packet Lab
 
@@ -195,10 +196,11 @@ let the air out of my own tyre.
 
 **Coming up in this series:**
 
-- [Decoding the packets from my own car][part-5] (Part 5) and building a
-  decoder for them
+- [Decoding the packets from my own car][part-5] (Part 5) and finding the
+  pressure and temperature in them
 - The different modes of a sensor, and what happens when I let the air out of
   my tyre
+- Contributing my decoder to rtl_433
 - Building a surveillance lab in my glovebox to collect data on every drive
 - Why the sensor measures temperature
 - Doing all kinds of data analysis on the data collected

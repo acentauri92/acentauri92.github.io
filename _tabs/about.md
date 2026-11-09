@@ -8,6 +8,7 @@ order: 3
 <img src="/assets/images/about-cover.jpg"
      alt="Me speaking on stage at FOSSASIA, with the audience in the foreground"
      class="about-cover">
+<p class="about-caption">Speaking at FOSSASIA Summit 2026 in Bangkok, Thailand</p>
 
 <style>
   .about-cover {
@@ -27,6 +28,13 @@ order: 3
       linear-gradient(to bottom, transparent 0%, #000 3%, #000 93%, transparent 100%);
     mask-composite: intersect;
     background: transparent !important;
+  }
+  .about-caption {
+    margin: -1.25rem 0 1.75rem;
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-muted-color);
   }
   /* the theme wraps images in a link with a grey placeholder; hide it here */
   a.img-link:has(> .about-cover) {

@@ -234,7 +234,8 @@ the sensor sends in a burst:
 {178}55555556956956a5a65a966a5aa65a56666956a5a9a50
 ```
 
-We will see in a later post why the sensor sends four packets in a single burst.
+We will see in the next post why the sensor sends four packets in a single
+burst.
 
 These are still Manchester encoded bits, not data. The bunch of `5`s at the
 start is `0101 0101 ...` in binary, the preamble the receiver uses to
@@ -248,10 +249,11 @@ long as the data inside it. If you want to know more about how the preamble and
 Manchester encoding keep the receiver in sync, I have listed some good tutorials
 under [further reading](#further-reading) at the end of this post.
 
-The flex decoder stops at raw bits and has no option to decode Manchester. But
-the good part is that you don't need to write any code for this.
-[BitBench][bitbench], a browser tool from the rtl_433 developers, takes rows
-like these and decodes them for you, and their
+Older versions of the flex decoder stop at raw bits. Newer ones, from version
+25.12, can undo Manchester too, which we will use in the next post, but doing it
+by hand first shows what is going on. And the good part is that you don't need
+to write any code for this. [BitBench][bitbench], a browser tool from the
+rtl_433 developers, takes rows like these and decodes them for you, and their
 [guide to analyzing unknown devices][rtl433-analyze] recommends putting your
 codes into it. You just copy and paste the four rows into the tool.
 
@@ -337,8 +339,8 @@ step.
 
 **Coming up in this series:**
 
-- Turning the bytes into pressure and temperature with the help of a tyre gauge,
-  and the one byte I couldn't explain
+- Turning the bytes into pressure and temperature with the help of a digital
+  tyre pressure gauge, and the one byte I couldn't explain
 - The different modes of a sensor, and what happens when I let the air out of
   my tyre
 - Contributing my decoder to rtl_433

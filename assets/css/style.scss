@@ -1,13 +1,32 @@
 ---
 ---
 
+/* Site font: Ubuntu everywhere the theme sets Lato, Source Sans Pro or Oswald.
+   Code blocks keep the theme's monospace font. */
+body,
+h1, h2, h3, h4, h5, h6,
+header .post-desc,
+#toc-bar .label,
+#search-results a,
+kbd,
+#notification.toast .toast-body,
+#toc-popup .header .label,
+#toc-popup #toc-popup-content,
+.pagination,
+.share-mastodon,
+#toc-solo-trigger .label,
+.tag span,
+#archives .date.day {
+  font-family: Ubuntu, "Microsoft Yahei", sans-serif;
+}
+
 p {
   text-align: justify;
 }
 
 /* Match # whoami sidebar label to other nav items */
 #sidebar .nav-label-custom {
-  font-family: Lato, "Microsoft Yahei", sans-serif;
+  font-family: Ubuntu, "Microsoft Yahei", sans-serif;
   font-size: 90%;
   font-weight: 600;
   letter-spacing: 0.2px;
