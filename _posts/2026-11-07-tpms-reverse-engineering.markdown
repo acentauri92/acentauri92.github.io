@@ -238,16 +238,15 @@ We will see in a later post why the sensor sends four packets in a single burst.
 
 These are still Manchester encoded bits, not data. The bunch of `5`s at the
 start is `0101 0101 ...` in binary, the preamble the receiver uses to
-synchronize itself to the transmitter (the [synchronization chapter][pysdr-sync]
-of PySDR goes into how receivers do this), and it ends with a `6`, which is
-`0110` in binary, that breaks the pattern and marks where the data begins. The
-144 bits after that are the actual packet, still Manchester encoded (see [Part
-4][part-4-manchester] for how Manchester encoding works, and Ben Eater's video
-[Clock synchronization and Manchester coding][manchester-video] for how it keeps
-the receiver's clock in sync), so every pair of bits is one real bit, `10` for a
-1 and `01` for a 0. You can also see the tradeoff of Manchester encoding here.
-Each bit needs two symbols, so the packet is twice as long as the data inside
-it.
+synchronize itself to the transmitter, and it ends with a `6`, which is `0110`
+in binary, that breaks the pattern and marks where the data begins. The 144 bits
+after that are the actual packet, still Manchester encoded, so every pair of
+bits is one real bit, `10` for a 1 and `01` for a 0. We looked at how Manchester
+encoding works in [Part 4][part-4-manchester]. You can also see the tradeoff of
+Manchester encoding here. Each bit needs two symbols, so the packet is twice as
+long as the data inside it. If you want to know more about how the preamble and
+Manchester encoding keep the receiver in sync, I have listed some good tutorials
+under [further reading](#further-reading) at the end of this post.
 
 The flex decoder stops at raw bits and has no option to decode Manchester. But
 the good part is that you don't need to write any code for this.
@@ -298,13 +297,12 @@ will come back to in the next post.
 ## Cracking the checksum
 
 The last byte of every packet is a checksum, a small number calculated from the
-other bytes so the receiver can tell if anything got corrupted on the way (Ben
-Eater's video [Checksums and Hamming distance][checksum-video]{:target="_blank"
-rel="noopener"} explains them really well). The four copies above gave away how
-it works. Between copies, the sixth byte goes up by `0x10` (`01`, `11`, `21`,
-`31`) and the last byte goes up by exactly the same amount (`bc`, `cc`, `dc`,
-`ec`). That is what you would expect if the last byte is simply the sum of all
-the others.
+other bytes so the receiver can tell if anything got corrupted on the way. There
+is a nice video on checksums under [further reading](#further-reading) if you
+want to learn more. The four copies above gave away how it works. Between
+copies, the sixth byte goes up by `0x10` (`01`, `11`, `21`, `31`) and the last
+byte goes up by exactly the same amount (`bc`, `cc`, `dc`, `ec`). That is what
+you would expect if the last byte is simply the sum of all the others.
 
 And it is. Add up the first eight bytes and keep only the lowest byte of the
 result:
@@ -315,6 +313,21 @@ result:
 
 which is exactly the last byte. This held for every single packet from all
 my sensors.
+
+## Further reading
+
+If you want to dig deeper into some of the ideas in this post, these are the
+tutorials I found most helpful:
+
+- [Clock synchronization and Manchester
+  coding][manchester-video]{:target="_blank" rel="noopener"}, a video by Ben
+  Eater on how Manchester encoding keeps the receiver's clock in sync with the
+  transmitter
+- [Synchronization][pysdr-sync]{:target="_blank" rel="noopener"}, a chapter of
+  the free online book PySDR on how a receiver uses the preamble to find a
+  packet and sync to it
+- [Checksums and Hamming distance][checksum-video]{:target="_blank"
+  rel="noopener"}, a video by Ben Eater on how checksums catch corrupted data
 
 ## Coming up
 
