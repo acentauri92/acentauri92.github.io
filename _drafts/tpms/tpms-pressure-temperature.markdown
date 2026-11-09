@@ -13,6 +13,8 @@ image:
 hide_banner: true
 ---
 
+{% include tpms-series.html %}
+
 <!--
 FLAGS FOR DHEERAJ (remove before publishing)
 - 0x01 (pressure alert) is kept as a teaser for the modes post.

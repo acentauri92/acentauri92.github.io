@@ -1,0 +1,19 @@
+{%- comment -%}
+  Series box for the TPMS posts. Add {% include tpms-series.html %} near the top
+  of a post. The parts come from _data/tpms_series.yml, and the current post is
+  highlighted by matching its URL.
+{%- endcomment -%}
+<nav class="series-box" aria-label="TPMS series">
+  <p class="series-box-title">This post is part of my series on TPMS</p>
+  <ol class="series-box-list">
+    {%- for part in site.data.tpms_series -%}
+      {%- if part.url == page.url %}
+      <li class="current" aria-current="page"><span>{{ part.title }}</span> <em>(you are here)</em></li>
+      {%- elsif part.coming_soon %}
+      <li class="soon"><span>{{ part.title }}</span> <em>(coming soon)</em></li>
+      {%- else %}
+      <li><a href="{{ part.url | relative_url }}">{{ part.title }}</a></li>
+      {%- endif -%}
+    {%- endfor %}
+  </ol>
+</nav>

@@ -14,6 +14,8 @@ image:
 hide_banner: true
 ---
 
+{% include tpms-series.html %}
+
 As I mentioned in [Part 2][part-2], I did not know anything about TPMS at first.
 Once I did, I wanted to see what my own car was transmitting. As you might
 remember from the previous posts, I was collecting all the packets I could hear

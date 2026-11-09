@@ -315,3 +315,44 @@ p {
 .content img + em {
   font-style: italic;
 }
+
+/* TPMS series box at the top of each part */
+.series-box {
+  margin: 0 0 1.75rem;
+  padding: 0.9rem 1.2rem 0.6rem;
+  border: 1px solid var(--main-border-color);
+  border-left: 4px solid var(--link-color);
+  border-radius: 6px;
+  background: var(--card-bg);
+  font-size: 0.95rem;
+
+  .series-box-title {
+    margin: 0 0 0.4rem;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  .series-box-list {
+    margin: 0;
+    padding-left: 1.4rem;
+
+    li {
+      margin: 0.15rem 0;
+      color: var(--text-muted-color);
+    }
+
+    li.current {
+      color: var(--text-color);
+      font-weight: 500;
+
+      em {
+        font-weight: 400;
+        color: var(--text-muted-color);
+      }
+    }
+  }
+}
+
+.series-box .series-box-list li.soon em {
+  color: var(--text-muted-color);
+}

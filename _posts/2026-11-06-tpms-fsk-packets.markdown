@@ -14,6 +14,8 @@ image:
 hide_banner: true
 ---
 
+{% include tpms-series.html %}
+
 In the [last post][part-3] we captured a raw TPMS signal and looked at it in
 GNU Radio. We saw the frequency jumping between two levels. In this post, we
 will see how data is sent over the radio using frequency shift keying (FSK),

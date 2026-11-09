@@ -13,6 +13,8 @@ image:
     of the sensor body
 hide_banner: true
 ---
+
+{% include tpms-series.html %}
 So in the [first blog post][part-1], we have seen what a tyre pressure
 monitoring system (TPMS) is and how it helps prolong the life of your car tyres
 and improve safety. We have also seen that there are two types of systems:

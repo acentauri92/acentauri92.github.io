@@ -1,0 +1,14 @@
+# Parts of the TPMS series, in order. Add a line when a new part is published.
+- title: "What is TPMS? Tyre sensors and the most underrated screen in your car"
+  url: /posts/tpms-intro/
+- title: "Inside a TPMS sensor: a broken tyre sensor and a day at the workshop"
+  url: /posts/tpms-sensor-hardware/
+- title: "Every tyre is a radio station: listening to TPMS with an RTL-SDR"
+  url: /posts/tpms-listening-rtl-sdr/
+- title: "From radio waves to bits: FSK, Manchester encoding and the inside of a TPMS packet"
+  url: /posts/tpms-fsk-packets/
+- title: "Reverse engineering my car's tyre pressure sensors"
+  url: /posts/tpms-reverse-engineering/
+- title: "Reverse engineering my tyre sensors, part 2"
+  url: /posts/tpms-pressure-temperature/
+  coming_soon: true   # remove this line when Part 6 is published

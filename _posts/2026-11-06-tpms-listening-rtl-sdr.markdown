@@ -13,6 +13,8 @@ image:
     its frequency switching between two levels
 hide_banner: true
 ---
+
+{% include tpms-series.html %}
 In the [last blog][part-2], we went through what is inside a TPMS sensor and
 dug through its FCC filings to learn what it does and how it sends its data to
 the car's control unit. We have also seen that the packets are not encrypted,

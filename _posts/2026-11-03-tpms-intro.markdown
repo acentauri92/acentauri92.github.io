@@ -13,6 +13,8 @@ image:
     each tyre in psi
 hide_banner: true
 ---
+
+{% include tpms-series.html %}
 If you've ever driven a car, you must have seen this or a similar kind of
 display.
 
