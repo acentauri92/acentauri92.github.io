@@ -31,7 +31,9 @@ taken from the public [rtl_433_tests][rtl433-tests] repo.
 
 ![Spectrogram of a Toyota TPMS recording, showing one short packet and a
 zoomed-in view of it hopping between two frequencies][spectrogram]{: w="700" }
-*Spectrogram of a Toyota TPMS packet from the rtl_433_tests repo*
+*Spectrogram of a Toyota TPMS packet from the rtl_433_tests repo. Top: the
+whole recording, with a single packet in a quarter of a second. Bottom: 2 ms of
+that packet, hopping between two frequencies*
 
 The top plot is the whole recording, where the sensor stays quiet for a while
 and then sends a single packet at around 215 ms that lasts about 8 ms. This
@@ -53,7 +55,9 @@ PSK).
 ![The same bits sent with ASK, where the wave turns on and off, and with
 FSK, where the wave switches between a faster and a slower
 frequency][ask-fsk]{: w="700" }
-*The same bits sent with ASK and with FSK*
+*The same bits sent with ASK and with FSK. Top: the bits. Middle: ASK, where
+the wave turns on for a 1 and off for a 0. Bottom: FSK, a faster wave for a 1
+and a slower one for a 0*
 
 ASK is the simplest, with the wave switched on for a 1 and off for a 0. FSK
 keeps the wave on all the time and changes its frequency instead, using one
@@ -99,7 +103,9 @@ it stays in sync with the sensor for the whole packet.
 ![The same bits sent as plain levels, where a run of 0s is a flat line, and
 with Manchester encoding, where every bit has a change in the
 middle][manchester]{: w="700" }
-*The same bits, sent plain and with Manchester encoding*
+*The same bits, sent plain and with Manchester encoding. Top: plain bits,
+where a run of 0s is just a flat line. Bottom: Manchester, where every bit has a
+change in the middle*
 
 ### Differential Manchester
 
@@ -128,8 +134,10 @@ receiver that matches the sensor and by one that has the two frequencies the
 other way round. Plain Manchester decodes every bit wrong on the mismatched
 receiver while differential Manchester gives the same
 bits][diff-manchester]{: w="700" }
-*When the receiver reads the frequencies the other way round, plain Manchester
-gets every bit wrong while differential Manchester still decodes the same bits*
+*Top: plain Manchester. Bottom: differential Manchester. Left: a receiver that
+matches the sensor. Right: a receiver that reads the frequencies the other way
+round, where plain Manchester gets every bit wrong (red) while differential
+Manchester still decodes the same bits (green)*
 
 This also explains the hops of two different widths in the spectrogram. When
 there is no change at the start of a bit, the last half of one bit and the
@@ -165,7 +173,7 @@ None of this is in a public datasheet, and the layout above comes from the
 out from their own captures. Turning these bits into actual PSI and °C, and
 working out which bits mean what in the first place, is something I had to do
 for the sensors on my own car. We will go through all of it in [Part 5][part-5]
-and the post after it, where we analyse my car's packets and work out what every
+and [Part 6][part-6], where we analyse my car's packets and work out what every
 byte means.
 
 ## Packet Lab
@@ -198,8 +206,8 @@ let the air out of my own tyre.
 
 **Coming up in this series:**
 
-- [Decoding the packets from my own car][part-5] (Part 5) and finding the
-  pressure and temperature in them
+- [Decoding the packets from my own car][part-5] (Part 5) and
+  [finding the pressure and temperature in them][part-6] (Part 6)
 - The different modes of a sensor, and what happens when I let the air out of
   my tyre
 - Contributing my decoder to rtl_433
@@ -227,3 +235,4 @@ Stay tuned.
 [packet-lab-img]: /assets/images/tpms/packet-lab.png
 [toyota-decoder]: https://github.com/merbanan/rtl_433/blob/master/src/devices/tpms_toyota.c
 [part-5]: {% post_url 2026-11-07-tpms-reverse-engineering %}
+[part-6]: {% post_url 2026-11-10-tpms-pressure-temperature %}
